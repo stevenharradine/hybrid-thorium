@@ -6,9 +6,7 @@
 .c-overlay {
     height: 100%;
     width: 100%;
-    overflow-y: scroll;
     background-color: white;
-    -webkit-overflow-scrolling: touch;
 }
 
 .c-overlay__header {
@@ -38,7 +36,9 @@
 }
 
 .c-overlay__body {
-  position: relative;;
+  position: fixed;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
   top: 75px;
   bottom: 0;
   width: 100%;
