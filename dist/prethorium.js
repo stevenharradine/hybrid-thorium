@@ -1761,14 +1761,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  watch: {
 	    isVisible: function isVisible(_isVisible) {
+	      var el = window.document.body;
+	      var className = 'no-scroll';
 	      if (_isVisible) {
-	        window.document.body.style.overflow = 'hidden';
-	        window.document.body.style.position = 'fixed';
-	        // window.document.body.style.height = '100%';
+	        if (!!el.classList) {
+	          el.classList.add(className);
+	        } else {
+	          el.className += ' ' + className;
+	        }
 	      } else {
-	        window.document.body.style.overflow = 'visible';
-	        window.document.body.style.position = '';
-	        // window.document.body.style.height = 'auto';
+	        if (el.classList) {
+	          el.classList.remove(className);
+	        } else {
+	          el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	        }
 	      }
 	    }
 	  },

@@ -678,6 +678,13 @@
  * Block: `overlay-container`
  * -----------------------------------------------------------------------------
  */
+.no-scroll {
+  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: hidden;
+  position: relative;
+  height: 100%; }
+
 .c-overlay-container__curtain {
   opacity: 0;
   -webkit-transition: opacity 1.3s ease-in-out;
@@ -722,8 +729,7 @@
   height: 100%;
   width: 100%;
   overflow-y: scroll;
-  background-color: white;
-  position: relative; }
+  background-color: white; }
 
 .c-overlay__header {
   padding: 20px;
@@ -748,11 +754,11 @@
     content: '\E106'; }
 
 .c-overlay__body {
-  position: absolute;
+  position: relative;
   top: 75px;
   bottom: 0;
   width: 100%;
-  padding: 20px; }
+  padding: 20px 20px 50px 20px; }
 /**
  * Namespace: `c-`
  * Block: `legal-sup`

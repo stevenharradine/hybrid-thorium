@@ -20,14 +20,25 @@ export default {
   },
   watch: {
     isVisible(isVisible) {
+      let el = window.document.body;
+      let className = 'no-scroll';
       if (isVisible) {
-        window.document.body.style.overflow = 'hidden';
-        window.document.body.style.position = 'fixed';
-        // window.document.body.style.height = '100%';
+        if (!!el.classList) {
+          el.classList.add(className);
+        } else {
+          el.className += ' ' + className;
+        }
       } else {
-        window.document.body.style.overflow = 'visible';
-        window.document.body.style.position = '';
-        // window.document.body.style.height = 'auto';
+        if (el.classList) {
+          el.classList.remove(className);
+        } else {
+          el.className = el
+                          .className
+                          .replace(
+                            new RegExp(
+                              '(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' '
+                          );
+        }
       }
     }
   },

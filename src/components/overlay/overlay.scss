@@ -8,7 +8,6 @@
     width: 100%;
     overflow-y: scroll;
     background-color: white;
-    position: relative;
 }
 
 .c-overlay__header {
@@ -38,9 +37,9 @@
 }
 
 .c-overlay__body {
-  position: absolute;
+  position: relative;;
   top: 75px;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
 }
