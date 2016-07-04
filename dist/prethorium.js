@@ -1763,8 +1763,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    isVisible: function isVisible(_isVisible) {
 	      if (_isVisible) {
 	        window.document.body.style.overflow = 'hidden';
+	        window.document.body.style.position = 'fixed';
 	      } else {
 	        window.document.body.style.overflow = 'visible';
+	        window.document.body.style.position = '';
 	      }
 	    }
 	  },
