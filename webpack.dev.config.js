@@ -4,12 +4,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        prethorium: './index.js'
+        hybridthorium: './index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        library: 'PreThorium',
+        library: 'HybridThorium',
         libraryTarget: 'umd'
     },
     module: {
