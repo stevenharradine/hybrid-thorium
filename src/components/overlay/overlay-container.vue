@@ -10,7 +10,6 @@
 * Ex: <overlay-container is-visible="(Boolean) false">
       </overlay-container>
 */
-import overlayOpenerDirective from '../../directives/overlay-opener';
 const ESC = 27;
 export default {
   props: {

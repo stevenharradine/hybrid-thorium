@@ -18,6 +18,9 @@ import setFocus from '../../directives/set-focus';
 
 export default {
   mixins,
+  directives: {
+    setFocus
+  },
   data() {
     return {
       indexedLegals: [],
