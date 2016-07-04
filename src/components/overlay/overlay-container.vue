@@ -22,8 +22,10 @@ export default {
     isVisible(isVisible) {
       if (isVisible) {
         window.document.body.style.overflow = 'hidden';
+        window.document.body.style.position = 'fixed';
       } else {
         window.document.body.style.overflow = 'visible';
+        window.document.body.style.position = '';
       }
     }
   },
