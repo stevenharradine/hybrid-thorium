@@ -729,7 +729,8 @@
   height: 100%;
   width: 100%;
   overflow-y: scroll;
-  background-color: white; }
+  background-color: white;
+  -webkit-overflow-scrolling: touch; }
 
 .c-overlay__header {
   padding: 20px;
