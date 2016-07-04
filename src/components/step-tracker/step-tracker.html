@@ -1,0 +1,14 @@
+<ul class="c-step-tracker">
+  <li class="c-step-tracker__step" :class="{
+      'c-step-tracker__step--complete': currentStep > $index,
+      'c-step-tracker__step--active': currentStep === $index,
+      'c-step-tracker__setp--clickable': (currentStep > $index && config.isClickable)
+  }" v-for="step in config.steps">
+    <a :href="step.link || false" @click="clickHandler($event, step, $index)" v-if="config.isClickable">
+        <span class="c-step-tracker__icon"></span>
+        <span class="c-step-tracker__label">{{$index + 1}}. {{step.title}}</span>
+    </a>
+    <span v-else class="c-step-tracker__icon"></span>
+    <span v-else class="c-step-tracker__label">{{$index + 1}}. {{step.title}}</span>
+  </li>
+</ul>

@@ -1,0 +1,15 @@
+<div class="c-legal-container">
+  <ol class="c-legal-container__ordered-list">
+    <li v-set-focus="legal.isSelected" class="c-legal-container__list-item" :class="{
+      'c-legal-container__list-item--active': legal.isSelected
+    }" v-for="legal in indexedLegals" v-html="legal.content">
+    </li>
+  </ol>
+  <ul class="c-legal-container__unordered-list">
+    <li
+      class="c-legal-container__list-item"
+      v-for="legal in nonIndexedLegals" v-html="legal.content"
+    >
+    </li>
+  </ul>
+</div>

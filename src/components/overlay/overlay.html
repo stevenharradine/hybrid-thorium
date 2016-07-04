@@ -1,0 +1,15 @@
+<article class="c-overlay" v-show="isVisible">
+    <div class="c-overlay__body">
+        <slot name="overlay-body"></slot>
+    </div>
+    <header class="c-overlay__header">
+        <slot name="overlay-header"></slot>
+        <button
+            type="button"
+            class="c-overlay__close-button"
+            aria-label="Close"
+            tabindex="0"
+            @click.prevent="closeOverlay"
+        ></button>
+    </header>
+</article>

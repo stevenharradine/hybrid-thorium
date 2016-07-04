@@ -56,11 +56,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _overlayOpener = __webpack_require__(16);
+	var _overlayOpener = __webpack_require__(39);
 	
 	var _overlayOpener2 = _interopRequireDefault(_overlayOpener);
 	
-	var _setFocus = __webpack_require__(17);
+	var _setFocus = __webpack_require__(16);
 	
 	var _setFocus2 = _interopRequireDefault(_setFocus);
 	
@@ -93,9 +93,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _tab2 = _interopRequireDefault(_tab);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	console.log(_overlayOpener2.default);
-	
 	
 	module.exports = {
 	  Directives: {
@@ -603,34 +600,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 16 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	/*
-	  @desc Add behavior to any element. When clicked, it will open the corresponding overlay
-	  Example: <button overlay-opener="my-overlay"></button>
-	*/
-	exports.default = {
-	  isLiteral: true,
-	  eventHandler: function eventHandler(e) {
-	    e.preventDefault();
-	    this.vm.$root.$broadcast('overlay::open', this.expression);
-	    this.vm.$root.$broadcast('overlayContainer::open');
-	  },
-	  bind: function bind() {
-	    this.el.addEventListener('click', this.eventHandler.bind(this));
-	  },
-	  unbind: function unbind() {
-	    this.el.removeEventListener('click');
-	  }
-	};
-
-/***/ },
-/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -639,7 +608,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _defer = __webpack_require__(33);
+	var _defer = __webpack_require__(32);
 	
 	var _defer2 = _interopRequireDefault(_defer);
 	
@@ -663,7 +632,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   */
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -685,7 +654,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = [_events2.default, _xhrResponse2.default];
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var getNative = __webpack_require__(3),
@@ -698,7 +667,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var ListCache = __webpack_require__(6),
@@ -730,7 +699,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var root = __webpack_require__(1);
@@ -742,10 +711,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var castPath = __webpack_require__(26),
+	var castPath = __webpack_require__(25),
 	    isKey = __webpack_require__(9),
 	    toKey = __webpack_require__(11);
 	
@@ -773,7 +742,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var getPrototype = __webpack_require__(83);
@@ -805,7 +774,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var baseIsEqualDeep = __webpack_require__(67),
@@ -841,7 +810,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports) {
 
 	/**
@@ -861,7 +830,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isArray = __webpack_require__(2),
@@ -882,7 +851,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var SetCache = __webpack_require__(59),
@@ -969,7 +938,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports) {
 
 	/**
@@ -995,7 +964,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports) {
 
 	/** Used as references for various `Number` constants. */
@@ -1023,7 +992,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(4);
@@ -1044,7 +1013,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports) {
 
 	/**
@@ -1070,7 +1039,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports) {
 
 	/** Used to resolve the decompiled source of functions. */
@@ -1099,7 +1068,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var baseDelay = __webpack_require__(64),
@@ -1131,7 +1100,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isArrayLikeObject = __webpack_require__(122);
@@ -1183,7 +1152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var getLength = __webpack_require__(81),
@@ -1223,7 +1192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isArray = __webpack_require__(2),
@@ -1269,14 +1238,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseHas = __webpack_require__(23),
+	var baseHas = __webpack_require__(22),
 	    baseKeys = __webpack_require__(71),
 	    indexKeys = __webpack_require__(92),
-	    isArrayLike = __webpack_require__(35),
-	    isIndex = __webpack_require__(29),
+	    isArrayLike = __webpack_require__(34),
+	    isIndex = __webpack_require__(28),
 	    isPrototype = __webpack_require__(95);
 	
 	/**
@@ -1331,7 +1300,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var toFinite = __webpack_require__(128);
@@ -1373,7 +1342,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isFunction = __webpack_require__(15),
@@ -1446,6 +1415,34 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	/*
+	  @desc Add behavior to any element. When clicked, it will open the corresponding overlay
+	  Example: <button overlay-opener="my-overlay"></button>
+	*/
+	exports.default = {
+	  isLiteral: true,
+	  eventHandler: function eventHandler(e) {
+	    e.preventDefault();
+	    this.vm.$root.$broadcast('overlay::open', this.expression);
+	    this.vm.$root.$broadcast('overlayContainer::open');
+	  },
+	  bind: function bind() {
+	    this.el.addEventListener('click', this.eventHandler.bind(this));
+	  },
+	  unbind: function unbind() {
+	    this.el.removeEventListener('click');
+	  }
+	};
+
+/***/ },
 /* 40 */
 /***/ function(module, exports) {
 
@@ -1493,7 +1490,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _mixins = __webpack_require__(18);
+	var _mixins = __webpack_require__(17);
 	
 	var _mixins2 = _interopRequireDefault(_mixins);
 	
@@ -1505,7 +1502,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _debounce2 = _interopRequireDefault(_debounce);
 	
-	var _setFocus = __webpack_require__(17);
+	var _setFocus = __webpack_require__(16);
 	
 	var _setFocus2 = _interopRequireDefault(_setFocus);
 	
@@ -1526,6 +1523,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	exports.default = {
 	  mixins: _mixins2.default,
+	  directives: {
+	    setFocus: _setFocus2.default
+	  },
 	  data: function data() {
 	    return {
 	      indexedLegals: [],
@@ -1647,11 +1647,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _mixins = __webpack_require__(18);
+	var _mixins = __webpack_require__(17);
 	
 	var _mixins2 = _interopRequireDefault(_mixins);
 	
-	var _defer = __webpack_require__(33);
+	var _defer = __webpack_require__(32);
 	
 	var _defer2 = _interopRequireDefault(_defer);
 	
@@ -1731,21 +1731,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 44 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
-	var _overlayOpener = __webpack_require__(16);
-	
-	var _overlayOpener2 = _interopRequireDefault(_overlayOpener);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var ESC = 27; // <style lang="sass">
+	// <style lang="sass">
 	//     @import '~telus-hydra/_base_scope';
 	//     @import './overlay-container.scss';
 	// </style>
@@ -1757,7 +1750,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	* Ex: <overlay-container is-visible="(Boolean) false">
 	      </overlay-container>
 	*/
-	
+	var ESC = 27;
 	exports.default = {
 	  props: {
 	    isVisible: {
@@ -2330,13 +2323,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Stack = __webpack_require__(20),
-	    equalArrays = __webpack_require__(27),
+	var Stack = __webpack_require__(19),
+	    equalArrays = __webpack_require__(26),
 	    equalByTag = __webpack_require__(79),
 	    equalObjects = __webpack_require__(80),
 	    getTag = __webpack_require__(84),
 	    isArray = __webpack_require__(2),
-	    isHostObject = __webpack_require__(28),
+	    isHostObject = __webpack_require__(27),
 	    isTypedArray = __webpack_require__(123);
 	
 	/** Used to compose bitmasks for comparison styles. */
@@ -2418,8 +2411,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Stack = __webpack_require__(20),
-	    baseIsEqual = __webpack_require__(24);
+	var Stack = __webpack_require__(19),
+	    baseIsEqual = __webpack_require__(23);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -2487,10 +2480,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var isFunction = __webpack_require__(15),
-	    isHostObject = __webpack_require__(28),
+	    isHostObject = __webpack_require__(27),
 	    isMasked = __webpack_require__(94),
 	    isObject = __webpack_require__(4),
-	    toSource = __webpack_require__(32);
+	    toSource = __webpack_require__(31);
 	
 	/**
 	 * Used to match `RegExp`
@@ -2600,7 +2593,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var baseIsMatch = __webpack_require__(68),
 	    getMatchData = __webpack_require__(82),
-	    matchesStrictComparable = __webpack_require__(31);
+	    matchesStrictComparable = __webpack_require__(30);
 	
 	/**
 	 * The base implementation of `_.matches` which doesn't clone `source`.
@@ -2626,12 +2619,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsEqual = __webpack_require__(24),
+	var baseIsEqual = __webpack_require__(23),
 	    get = __webpack_require__(119),
 	    hasIn = __webpack_require__(120),
 	    isKey = __webpack_require__(9),
-	    isStrictComparable = __webpack_require__(30),
-	    matchesStrictComparable = __webpack_require__(31),
+	    isStrictComparable = __webpack_require__(29),
+	    matchesStrictComparable = __webpack_require__(30),
 	    toKey = __webpack_require__(11);
 	
 	/** Used to compose bitmasks for comparison styles. */
@@ -2665,7 +2658,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseGet = __webpack_require__(22);
+	var baseGet = __webpack_require__(21);
 	
 	/**
 	 * A specialized version of `baseProperty` which supports deep paths.
@@ -2713,7 +2706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(21),
+	var Symbol = __webpack_require__(20),
 	    isSymbol = __webpack_require__(13);
 	
 	/** Used as references for various `Number` constants. */
@@ -2780,9 +2773,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(21),
+	var Symbol = __webpack_require__(20),
 	    Uint8Array = __webpack_require__(60),
-	    equalArrays = __webpack_require__(27),
+	    equalArrays = __webpack_require__(26),
 	    mapToArray = __webpack_require__(106),
 	    setToArray = __webpack_require__(109);
 	
@@ -2900,8 +2893,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseHas = __webpack_require__(23),
-	    keys = __webpack_require__(37);
+	var baseHas = __webpack_require__(22),
+	    keys = __webpack_require__(36);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var PARTIAL_COMPARE_FLAG = 2;
@@ -2989,7 +2982,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseProperty = __webpack_require__(25);
+	var baseProperty = __webpack_require__(24);
 	
 	/**
 	 * Gets the "length" property value of `object`.
@@ -3011,8 +3004,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isStrictComparable = __webpack_require__(30),
-	    keys = __webpack_require__(37);
+	var isStrictComparable = __webpack_require__(29),
+	    keys = __webpack_require__(36);
 	
 	/**
 	 * Gets the property names, values, and compare flags of `object`.
@@ -3063,11 +3056,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var DataView = __webpack_require__(55),
-	    Map = __webpack_require__(19),
+	    Map = __webpack_require__(18),
 	    Promise = __webpack_require__(57),
 	    Set = __webpack_require__(58),
 	    WeakMap = __webpack_require__(61),
-	    toSource = __webpack_require__(32);
+	    toSource = __webpack_require__(31);
 	
 	/** `Object#toString` result references. */
 	var mapTag = '[object Map]',
@@ -3157,13 +3150,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var castPath = __webpack_require__(26),
-	    isArguments = __webpack_require__(34),
+	var castPath = __webpack_require__(25),
+	    isArguments = __webpack_require__(33),
 	    isArray = __webpack_require__(2),
-	    isIndex = __webpack_require__(29),
+	    isIndex = __webpack_require__(28),
 	    isKey = __webpack_require__(9),
 	    isLength = __webpack_require__(12),
-	    isString = __webpack_require__(36),
+	    isString = __webpack_require__(35),
 	    toKey = __webpack_require__(11);
 	
 	/**
@@ -3339,10 +3332,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var baseTimes = __webpack_require__(75),
-	    isArguments = __webpack_require__(34),
+	    isArguments = __webpack_require__(33),
 	    isArray = __webpack_require__(2),
 	    isLength = __webpack_require__(12),
-	    isString = __webpack_require__(36);
+	    isString = __webpack_require__(35);
 	
 	/**
 	 * Creates an array of index keys for `object` values of arrays,
@@ -3577,7 +3570,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var Hash = __webpack_require__(56),
 	    ListCache = __webpack_require__(6),
-	    Map = __webpack_require__(19);
+	    Map = __webpack_require__(18);
 	
 	/**
 	 * Removes all key-value entries from the map.
@@ -3929,7 +3922,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var isObject = __webpack_require__(4),
 	    now = __webpack_require__(125),
-	    toNumber = __webpack_require__(39);
+	    toNumber = __webpack_require__(38);
 	
 	/** Used as the `TypeError` message for "Functions" methods. */
 	var FUNC_ERROR_TEXT = 'Expected a function';
@@ -4159,7 +4152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var baseFindIndex = __webpack_require__(65),
 	    baseIteratee = __webpack_require__(70),
-	    toInteger = __webpack_require__(38);
+	    toInteger = __webpack_require__(37);
 	
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeMax = Math.max;
@@ -4219,7 +4212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseGet = __webpack_require__(22);
+	var baseGet = __webpack_require__(21);
 	
 	/**
 	 * Gets the value at `path` of `object`. If the resolved value is
@@ -4325,7 +4318,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArrayLike = __webpack_require__(35),
+	var isArrayLike = __webpack_require__(34),
 	    isObjectLike = __webpack_require__(5);
 	
 	/**
@@ -4556,7 +4549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseProperty = __webpack_require__(25),
+	var baseProperty = __webpack_require__(24),
 	    basePropertyDeep = __webpack_require__(74),
 	    isKey = __webpack_require__(9),
 	    toKey = __webpack_require__(11);
@@ -4595,7 +4588,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var apply = __webpack_require__(62),
-	    toInteger = __webpack_require__(38);
+	    toInteger = __webpack_require__(37);
 	
 	/** Used as the `TypeError` message for "Functions" methods. */
 	var FUNC_ERROR_TEXT = 'Expected a function';
@@ -4664,7 +4657,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toNumber = __webpack_require__(39);
+	var toNumber = __webpack_require__(38);
 	
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0,
