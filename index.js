@@ -1,3 +1,5 @@
+import overlayOpener from './src/directives/overlay-opener';
+import setFocus from './src/directives/set-focus';
 import StepTracker from './src/components/step-tracker/index.vue';
 import OverlayContainer from './src/components/overlay/overlay-container.vue';
 import Overlay from './src/components/overlay/overlay.vue';
@@ -7,7 +9,11 @@ import Tabs from './src/components/tab/tabs.vue';
 import Tab from './src/components/tab/tab.vue';
 
 module.exports = {
-  Componenets: {
+  Directives: {
+    overlayOpener,
+    setFocus
+  },
+  Components: {
     StepTracker,
     OverlayContainer,
     Overlay,

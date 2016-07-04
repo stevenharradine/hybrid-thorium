@@ -3,7 +3,9 @@ var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    entry: './index.js',
+    entry: {
+        prethorium: './index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
@@ -43,9 +45,6 @@ module.exports = {
         fallback: [path.join(__dirname, './node_modules')]
     },
     plugins: [
-        new webpack.EnvironmentPlugin([
-            "NODE_ENV"
-        ]),
         new webpack.optimize.OccurenceOrderPlugin(),
         new ExtractTextPlugin("[name].css"),
 
