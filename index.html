@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" href="https://cdn.telus.digital/ui/hydra/0.6.0/base.css" charset="utf-8">
+      <link href="./dist/prethorium.css" rel="stylesheet">
+      <script src="https://cdn.telus.digital/ui/components/common/vendor/webcomponents-lite.min.js"></script>
+      <link rel="import" href="https://cdn.telus.digital/ui/components/hy-header/header.min.html">
+    </head>
+    <body>
+      <hy-header lang="en" region="bc" analyticstag="consumer_marketing" unit="personal"></hy-header>
+      <main>
+        <section class="hy_c-module hy_t-grey">
+          <div class="hy_o-wrapper">
+            <h2 class="hy_c-headline hy_c-headline--h2 hy_t-grey">Step Tracker</h2>
+            <hr class="hy_u-space-mb-2">
+            <step-tracker :current-step="stepTrackerCurrentStep" :config="stepTrackerConfig"></step-tracker>
+          </div>
+        </section>
+
+        <section class="hy_c-module hy_t-grey">
+          <div class="hy_o-wrapper">
+            <h2 class="hy_c-headline hy_c-headline--h2 hy_t-grey">Tab System</h2>
+            <hr class="hy_u-space-mb-2">
+            <tabs class="c-price-lookup hy_o-layout__item  hy_u-size-3of3@sm hy_u-size-3of4@md hy_u-size-4of12@lg">
+              <tab label="In a bundle">
+                <p>
+                  <span>Save $5 per month</span> on Internet when bundled with TV, Home Phone or Mobility.
+                </p>
+                <div class="price1">
+                  <div class="regular-price">
+                    <p class="price"><span class="dollar">$</span>83</p>
+                    <span class="monthly">per month
+                    </span>
+                  </div>
+                </div>
+                <div class="price2">
+                  <div class="promo-price">
+                    <p class="newCustomers">New Internet customers</p>
+                    <p class="price"><span class="dollar">$</span>40</p>
+                    <p><span class="monthly">per month</span> <span class="break">for 3 months
+                  </div>
+                </div>
+                <button type="button" name="button" class="hy_c-button hy_c-button--flat hy_t-green">Order now</button>
+              </tab>
+              <tab label="Internet only">
+                <p>
+                  <span>Save $5 per month</span> on Internet when bundled with TV, Home Phone or Mobility.
+                </p>
+                <div class="price1">
+                  <div class="regular-price">
+                    <p class="price"><span class="dollar">$</span>88</p>
+                    <span class="monthly">per month
+                    </span>
+                  </div>
+                </div>
+                <div class="price2">
+                  <div class="promo-price">
+                    <p class="newCustomers">New Internet customers</p>
+                    <p class="price"><span class="dollar">$</span>45</p>
+                    <p><span class="monthly">per month</span> <span class="break">for 3 months
+                    </span></p>
+                  </div>
+                </div>
+                <button type="button" name="button" class="hy_c-button hy_c-button--flat hy_t-green">Order now</button>
+              </tab>
+            </tabs>
+          </div>
+        </section>
+
+        <section class="hy_c-module hy_t-grey">
+          <div class="hy_o-wrapper">
+            <h2 class="hy_c-headline hy_c-headline--h2 hy_t-grey">Overlay System</h2>
+            <hr class="hy_u-space-mb-2">
+            <p>
+              <button v-overlay-opener="overlay-1" class="hy_c-button hy_c-button--link hy_t-purple" type="button" role="button">
+                Open overlay #1 <i class="hy_c-icon hy_c-icon--arrow-right-circled hy_c-button__icon"></i>
+              </button>
+            </p>
+            <p>
+              <button v-overlay-opener="overlay-2" class="hy_c-button hy_c-button--link hy_t-purple" type="button" role="button">
+                Open overlay #2 <i class="hy_c-icon hy_c-icon--arrow-right-circled hy_c-button__icon"></i>
+              </button>
+            </p>
+          </div>
+        </section>
+        <section class="hy_c-module hy_t-grey">
+          <div class="hy_o-wrapper">
+            <h2 class="hy_c-headline hy_c-headline--h2 hy_t-grey">Legal System</h2>
+            <hr class="hy_u-space-mb-2">
+            <p class="hy_c-copy hy_c-copy--body hy_t-grey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <legal-counter
+                v-overlay-opener="legal-overlay"
+                legal-key="fibre-promotions-phone"
+                legal-lang="en" legal-region="bc"
+                ></legal-counter>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <legal-counter
+                v-overlay-opener="legal-overlay"
+                legal-key="fibre-free-installation"
+                legal-lang="en" legal-region="bc"
+                ></legal-counter>fugiat nulla pariatur.
+              Excepteur<legal-counter
+                v-overlay-opener="legal-overlay"
+                legal-key="fibre-promotions-ffg"
+                legal-lang="en" legal-region="bc"
+                ></legal-counter> sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit <legal-counter
+                v-overlay-opener="legal-overlay"
+                legal-key="fibre-telus-and-network-logos"
+                legal-lang="en" legal-region="bc"
+                ></legal-counter>anim id est laborum<legal-counter
+                  v-overlay-opener="legal-overlay"
+                  legal-key="fibre-promotions-phone"
+                  legal-lang="en" legal-region="bc"
+                  ></legal-counter>.
+            </p>
+          </div>
+        </section>
+
+      </main>
+      <overlay-container>
+        <overlay overlay-key="overlay-1">
+          <h4 class="hy_c-headline hy_c-headline--h4" slot="overlay-header">This is overlay #1</h4>
+          <article slot="overlay-body">
+              Overlay #1 body
+          </article>
+        </overlay>
+        <overlay overlay-key="overlay-2">
+          <h4 class="hy_c-headline hy_c-headline--h4" slot="overlay-header">This is overlay #2</h4>
+          <article slot="overlay-body">
+              Overlay #2 body
+          </article>
+        </overlay>
+        <overlay overlay-key="legal-overlay">
+          <h4 class="hy_c-headline hy_c-headline--h4" slot="overlay-header">Terms and conditions</h4>
+          <article slot="overlay-body">
+              <legal-container></legal-container>
+          </article>
+        </overlay>
+      </overlay-container>
+      <script src="http://cdn.jsdelivr.net/vue/1.0.26/vue.min.js"></script>
+      <script src="./dist/prethorium.js"></script>
+
+      <script>
+      let vm = null;
+      let stepTrackerCurrentStep = 2;
+      let stepTrackerConfig = {
+        isClickable: true,
+        steps: [
+          {
+            title: 'Step A',
+            link: '',
+            onClickHandler(event) {
+              vm.$set('stepTrackerCurrentStep', 0);
+            }
+          },
+          {
+            title: 'Step B',
+            link: '',
+            onClickHandler() {
+              vm.$set('stepTrackerCurrentStep', 1);
+            }
+          },
+          {
+            title: 'Step C',
+            link: '',
+            onClickHandler() {
+              vm.$set('stepTrackerCurrentStep', 2);
+            }
+          },
+          {
+            title: 'Step D',
+            link: '',
+            onClickHandler() {
+              vm.$set('stepTrackerCurrentStep', 3);
+            }
+          }
+        ]
+      };
+      vm = new Vue({
+        el: 'body',
+        data: {
+          stepTrackerConfig,
+          stepTrackerCurrentStep,
+          ligerApplicationKey: 'b9738d67b89dfc782746d4a9cf4a1093',
+          ligerEndPoint: 'https://api.cms.telus.com/legals'
+        },
+        directives: PreThorium.Directives,
+        components: PreThorium.Components
+      });
+      </script>
+    </body>
+</html>
