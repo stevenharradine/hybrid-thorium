@@ -45,6 +45,10 @@ module.exports = {
         fallback: [path.join(__dirname, './node_modules')]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+          'Promise': 'exports?global.Promise!es6-promise',
+          'fetch': 'exports?self.fetch!whatwg-fetch'
+        }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new ExtractTextPlugin("[name].css"),
 
