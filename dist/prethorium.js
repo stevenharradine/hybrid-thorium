@@ -1764,11 +1764,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (_isVisible) {
 	        window.document.body.style.overflow = 'hidden';
 	        window.document.body.style.position = 'relative';
-	        window.document.body.style.height = '100%';
+	        // window.document.body.style.height = '100%';
 	      } else {
 	        window.document.body.style.overflow = 'visible';
 	        window.document.body.style.position = '';
-	        window.document.body.style.height = 'auto';
+	        // window.document.body.style.height = 'auto';
 	      }
 	    }
 	  },
