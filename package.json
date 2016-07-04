@@ -1,5 +1,5 @@
 {
-  "name": "pre-thorium",
+  "name": "hybrid-thorium",
   "version": "0.0.1",
   "description": "A collection of essential Vue components with TELUS style",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/telusdigital/pre-thorium.git"
+    "url": "https://github.com/telusdigital/hybrid-thorium.git"
   },
   "keywords": [
     "TELUS-components",
@@ -19,9 +19,9 @@
   "author": "Bo Xing <bo.xing@telus.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/telusdigital/pre-thorium/issues"
+    "url": "https://github.com/telusdigital/hybrid-thorium/issues"
   },
-  "homepage": "https://github.com/telusdigital/pre-thorium#readme",
+  "homepage": "https://github.com/telusdigital/hybrid-thorium#readme",
   "dependencies": {
     "es6-promise": "^3.2.1",
     "lodash": "^4.13.1",
