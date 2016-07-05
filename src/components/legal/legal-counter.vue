@@ -55,7 +55,11 @@ export default {
       this.rootBroadcast('legal::click', this.legalKey);
     }
   },
+  beforeCompile() {
+    console.log(this.legalKey);
+  },
   ready() {
+    // console.log(this.legalKey);
     defer(() => {
       this.rootBroadcast('legal::init', {
         key: this.legalKey,
