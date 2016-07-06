@@ -13,6 +13,6 @@ export default {
     this.el.addEventListener('click', this.eventHandler.bind(this));
   },
   unbind() {
-    this.el.removeEventListener('click');
+    this.el.removeEventListener('click', this.eventHandler.bind(this));
   },
 };
