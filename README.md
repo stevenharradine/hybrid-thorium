@@ -23,5 +23,5 @@ open your browser http://localhost:9999
 npm run prod
 ```
 
-### To do :
-1. Add Karma + Mocha unit test
+### Todo :
+* Add Karma + Mocha unit test
