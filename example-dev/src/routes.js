@@ -41,5 +41,15 @@ export default {
         }
       }
     }
+  },
+  '/collapsable-panel': {
+    component: {
+      template: '<collapsable-panel-page></collapsable-panel-page>',
+      components: {
+        CollapsablePanelPage(resolve) {
+          require(['views/collapsable-panel-page.vue'], resolve);
+        }
+      }
+    }
   }
 };

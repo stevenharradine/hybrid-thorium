@@ -7,6 +7,7 @@ import LegalCounter from './components/legal/legal-counter.vue';
 import LegalContainer from './components/legal/legal-container.vue';
 import Tabs from './components/tab/tabs.vue';
 import Tab from './components/tab/tab.vue';
+import CollapsablePanel from './components/collapsable-panel/index.vue';
 
 module.exports = {
   Directives: {
@@ -20,6 +21,7 @@ module.exports = {
     LegalCounter,
     LegalContainer,
     Tabs,
-    Tab
+    Tab,
+    CollapsablePanel
   }
 };

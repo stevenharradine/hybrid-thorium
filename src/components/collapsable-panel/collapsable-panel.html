@@ -1,0 +1,15 @@
+<div class="c-collapsable-panel">
+  <h3
+    @click.prevent="toggleOpen"
+    :class="{
+      'c-collapsable-panel__header--open': isOpen
+    }"
+    class="c-collapsable-panel__header hy_c-headline hy_c-headline--h3 hy_t-grey"
+    v-html="label">
+  </h3>
+  <div class="c-collapsable-panel__body" :class="{
+    'c-collapsable-panel__body--open': isOpen
+  }">
+    <slot></slot>
+  </div>
+</div>

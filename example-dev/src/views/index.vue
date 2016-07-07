@@ -8,6 +8,7 @@
         <li><a class="hy_c-button hy_c-button--link hy_t-purple" v-link="{path: '/tabs'}">Tabs</a></li>
         <li><a class="hy_c-button hy_c-button--link hy_t-purple" v-link="{path: '/overlay'}">Overlay</a></li>
         <li><a class="hy_c-button hy_c-button--link hy_t-purple" v-link="{path: '/legal'}">Legal</a></li>
+        <li><a class="hy_c-button hy_c-button--link hy_t-purple" v-link="{path: '/collapsable-panel'}">Collapsable Panel</a></li>
       </ul>
     </div>
   </section>
