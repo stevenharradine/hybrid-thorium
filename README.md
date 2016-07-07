@@ -8,7 +8,7 @@ git@github.com:telusdigital/hybrid-thorium.git
 cd hybrid-thorium
 npm install
 npm run dev
-open your browser http://localhost:9999
+open your browser http://localhost:9999 (hot reload enabled)
 ```
 
 ## To add new component
