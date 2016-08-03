@@ -5,7 +5,8 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --inline --hot --config scripts/webpack.dev.config.js --content-base example-dev/ --port 9999",
-    "prod": "webpack -p --progress --config scripts/webpack.prod.config.js"
+    "prod": "webpack -p --progress --config scripts/webpack.prod.config.js",
+    "test": "karma start scripts/karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -39,8 +40,16 @@
     "eslint-plugin-html": "^1.3.0",
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
+    "function-bind": "^1.1.0",
     "imports-loader": "^0.6.5",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-spec-reporter": "0.0.26",
+    "karma-webpack": "^1.7.0",
     "node-sass": "^3.7.0",
+    "phantomjs": "^2.1.7",
     "vue": "^1.0.24",
     "vue-hot-reload-api": "^1.3.2",
     "vue-html-loader": "^1.2.2",

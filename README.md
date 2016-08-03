@@ -23,5 +23,8 @@ open your browser http://localhost:9999 (hot reload enabled)
 npm run prod
 ```
 This will create hybridthorium.css and hybridthorium.js in ./dist folder
-### Todo :
-* Add Karma + Mocha unit test
+
+## To run unit test
+```
+npm run test
+```
