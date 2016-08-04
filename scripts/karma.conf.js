@@ -1,6 +1,6 @@
-var webpackConf = require('./webpack.test.config')
+var webpackConf = require('./webpack.test.config');
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     browsers: ['PhantomJS'],
     frameworks: ['jasmine'],
