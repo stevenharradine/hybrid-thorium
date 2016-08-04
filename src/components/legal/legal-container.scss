@@ -1,0 +1,43 @@
+/**
+ * Namespace: `c-`
+ * Block: `legal-container`
+ * -----------------------------------------------------------------------------
+ */
+.c-legal-container {
+}
+.c-legal-container__ordered-list{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  list-style: decimal;
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.c-legal-container__unordered-list{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  list-style: none;
+  list-style-type: none;
+}
+
+.c-legal-container__list-item {
+  line-height: 19px;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  &--active {
+    background-color: #f9f1ff;
+  }
+
+  a {
+    color: hy_get-value($hy_colors, 'purple','49');
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    padding-bottom: 1px;
+
+    &:hover {
+      color: #8c68a6;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+/**
+ * Namespace: `c-`
+ * Block: `tabs`
+ * -----------------------------------------------------------------------------
+ */
+.c-tabs {
+}
+
+// Tab: Header
+// --------
+//
+// 1. a note.
+
+.c-tabs__header {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; // 1
+}
+
+.c-tabs__header-item {
+  margin-top: 2px;
+  height: 45px;
+  padding: 0 2px;
+  flex: 1;
+
+  a {
+    background-color: hy_get-value($hy_colors, 'grey','e2');
+    text-decoration: none;
+    padding: 13px 20px;
+    color: hy_get-value($hy_colors, 'purple','49');
+    display: block;
+  }
+
+  // State
+
+  &--active {
+    margin-top: 1px;
+    height: 46px;
+    background-color: hy_get-value($hy_colors, 'grey','ff');
+    border-top: 1px solid hy_get-value($hy_colors, 'grey','e2');
+    border-left: 1px solid hy_get-value($hy_colors, 'grey','e2');
+    border-right: 1px solid hy_get-value($hy_colors, 'grey','e2');
+
+    a {
+      background-color: hy_get-value($hy_colors, 'grey','ff');
+      color: hy_get-value($hy_colors, 'grey','33');
+    }
+  }
+
+  &--disabled {
+    a {
+      background-color: hy_get-value($hy_colors, 'grey','f5');
+      color: hy_get-value($hy_colors, 'grey','ae');
+      cursor: not-allowed;
+    }
+  }
+}
+
+
+.c-tabs__body {
+  background-color: hy_get-value($hy_colors, 'grey','ff');
+  border: 1px solid hy_get-value($hy_colors, 'grey','e2');
+  margin-top: -1px;
+  padding: 20px;
+}
+.c-tabs__pane {
+  display: block;
+  border-top: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0 5px;
+  transition: all 0.5s ease-out;
+
+  &--active {
+    opacity: 1;
+    padding: 5px;
+    height: auto;
+  }
+}

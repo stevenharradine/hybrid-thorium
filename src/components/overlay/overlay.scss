@@ -1,0 +1,46 @@
+/**
+ * Namespace: `c-`
+ * Block: `overlay`
+ * -----------------------------------------------------------------------------
+ */
+.c-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.c-overlay__header {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    height: 75px;
+    width: 100%;
+    border-bottom: 1px solid hy_get-value($hy_colors, 'grey','e2');
+    background-color: hy_get-value($hy_colors, 'grey','f5');
+}
+
+.c-overlay__close-button {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: "Telus Icon";
+    font-size: 2em;
+    color: hy_get-value($hy_colors, 'purple','49');
+
+    &:before {
+        content: '\E106';
+    }
+}
+
+.c-overlay__body {
+  position: fixed;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  top: 75px;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 20px 50px 20px;
+}

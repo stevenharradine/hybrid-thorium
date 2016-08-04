@@ -1,0 +1,20 @@
+<div class="c-tabs">
+   <ul class="c-tabs__header">
+          <li
+              v-for="tab in tabs"
+              class="c-tabs__header-item"
+              :class="{
+                'c-tabs__header-item--active': ($index === activeTabIndex),
+                'c-tabs__header-item--disabled': tab.isDisabled
+              }"
+              :disabled="tab.disabled"
+          >
+              <a href="#" @click.prevent="handleTabListClick($index, tab)" v-html="tab.label"></a>
+          </li>
+   </ul>
+
+   <!-- Tab panes -->
+   <div class="c-tabs__body">
+      <slot></slot>
+   </div>
+</div>

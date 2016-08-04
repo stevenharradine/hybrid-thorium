@@ -1,0 +1,11 @@
+<div class="c-overlay-container">
+    <div class="c-overlay-container__curtain" :class="{
+        'c-overlay-container__curtain--active': isVisible
+    }" @click.prevent="isVisible=false">
+    </div>
+    <div class="c-overlay-container__overlays" :class="{
+        'c-overlay-container__overlays--active': isVisible
+    }">
+        <slot></slot>
+    </div>
+</div>

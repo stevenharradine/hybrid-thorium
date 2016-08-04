@@ -1,0 +1,16 @@
+/**
+ * Namespace: `c-`
+ * Block: `legal-sup`
+ * -----------------------------------------------------------------------------
+ */
+.c-legal-sup {
+  font-size: .75em;
+  line-height: 0;
+  vertical-align: super;
+  text-decoration: none;
+  top: 0 !important;
+  cursor: pointer;
+  a {
+    color: hy_get-value($hy_colors, 'purple','49');
+  }
+}
