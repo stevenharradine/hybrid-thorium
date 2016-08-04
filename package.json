@@ -4,7 +4,7 @@
   "description": "A collection of essential Vue components with TELUS style",
   "main": "src/main.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --inline --hot --config scripts/webpack.dev.config.js --content-base example-dev/ --port 9999",
+    "dev": "webpack-dev-server --progress --inline --hot --config scripts/webpack.dev.config.js  --port 9999",
     "prod": "webpack -p --progress --config scripts/webpack.prod.config.js",
     "test": "karma start scripts/karma.conf.js"
   },
