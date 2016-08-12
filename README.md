@@ -1,6 +1,7 @@
 # hybrid-thorium
 Hybrid Thorium is a collection of Vue components built on top of existing TELUS style.
-
+## Documentation
+https://telusdigital.github.io/hybrid-thorium/
 ## To contribute
 
 ```
