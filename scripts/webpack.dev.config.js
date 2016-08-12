@@ -3,12 +3,12 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        app: path.resolve(__dirname, '../example-dev/src/main.js'),
+        app: path.resolve(__dirname, '../dev/src/main.js'),
         vendor: ['vue']
     },
     output: {
-        path: path.resolve(__dirname, '../example-dev/app'),
-        publicPath: '/app/',
+        path: path.resolve(__dirname, '../dev/app'),
+        publicPath: '/dev/app/',
         filename: 'app.js'
     },
     module: {
@@ -43,7 +43,7 @@ module.exports = {
     resolve: {
         alias: {
             'hybrid-thorium': path.resolve(__dirname, '..'),
-            views: path.resolve(__dirname, '../example-dev/src/views')
+            views: path.resolve(__dirname, '../dev/src/views')
         }
     },
     resolveLoader: {

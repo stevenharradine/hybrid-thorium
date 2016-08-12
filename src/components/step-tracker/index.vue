@@ -7,20 +7,6 @@
 <template src="./step-tracker.html"></template>
 
 <script>
-/*
-    config = {
-        isClickable: (boolean) false,
-        steps: [
-            {
-                title: '',
-                link: '',
-                onClickHandler: fn
-            } ...
-        ]
-    }
-
-  Ex: <step-tracker current-step="(Integer) 0" config="(Object)"></step-tracker>
-*/
 export default {
   props: {
     config: {
