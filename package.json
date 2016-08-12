@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --progress --inline --hot --config scripts/webpack.dev.config.js  --port 9999",
     "prod": "webpack -p --progress --config scripts/webpack.prod.config.js",
+    "doc": "webpack -p --progress --config scripts/webpack.dev.config.js ./dev/src/main.js",
     "test": "karma start scripts/karma.conf.js"
   },
   "repository": {
@@ -42,6 +43,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "function-bind": "^1.1.0",
     "imports-loader": "^0.6.5",
+    "jasmine-ajax": "^3.2.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.2",
     "karma-jasmine": "^1.0.2",
