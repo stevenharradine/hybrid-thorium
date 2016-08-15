@@ -5,7 +5,38 @@
       <link rel="stylesheet" href="https://cdn.telus.digital/ui/hydra/0.6.0/base.css" charset="utf-8">
     </head>
     <body>
-      <main>
+      <header class="sg_c-header">
+
+      </header>
+      <nav class="sg_c-nav">
+        <h2 class="sg_c-nav__section">COMPONENTS</h2>
+        <ul class="hy_o-list">
+          <li class="sg_c-nav__list-item">
+            <a class="sg_c-nav__link" v-link="{path: '/step-tracker', activeClass: 'sg_c-nav__link--active'}" >
+              Step Tracker</a></li>
+          <li class="sg_c-nav__list-item">
+            <a class="sg_c-nav__link" v-link="{path: '/tabs', activeClass: 'sg_c-nav__link--active'}">
+              Tabs
+            </a>
+          </li>
+          <li class="sg_c-nav__list-item">
+            <a class="sg_c-nav__link" v-link="{path: '/overlay', activeClass: 'sg_c-nav__link--active'}">
+              Overlay
+            </a>
+          </li>
+          <li class="sg_c-nav__list-item">
+            <a class="sg_c-nav__link" v-link="{path: '/legal', activeClass: 'sg_c-nav__link--active'}">
+              Legal
+            </a>
+          </li>
+          <li class="sg_c-nav__list-item">
+            <a class="sg_c-nav__link" v-link="{path: '/collapsable-panel', activeClass: 'sg_c-nav__link--active'}">
+              Collapsable Panel
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main class="sg_c-site__main" role="main">
         <router-view></router-view>
       </main>
       <script src="/dev/app/vue.js"></script>
