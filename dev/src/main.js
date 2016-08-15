@@ -2,6 +2,7 @@ import Vue from 'Vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
 import HybridThorium from 'hybrid-thorium';
+import Prism from 'prismjs';
 Vue.config.debug = true;
 
 Vue.use(VueRouter);
@@ -17,5 +18,9 @@ let App = Vue.extend({
   }
 });
 router.map(routes);
-
+router.afterEach(() => {
+  setTimeout(() => {
+    Prism.highlightAll();
+  }, 0);
+});
 router.start(App, '#app-main');
