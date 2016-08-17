@@ -1,0 +1,30 @@
+<table class="sg_c-api-table">
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Type
+    </th>
+    <th>
+      Required
+    </th>
+    <th>
+      Default
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+
+  <tr v-for="item in items">
+    <td>{{item.name}}</td>
+    <td>{{item.type}}</td>
+    <td>{{item.isRequired}}</td>
+    <td>{{item.default}}</td>
+    <td>{{item.desc}}</td>
+  </tr>
+
+
+
+</table>
