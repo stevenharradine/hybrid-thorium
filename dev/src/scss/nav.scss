@@ -6,7 +6,6 @@
 .sg_c-nav {
   display: block;
   position: fixed;
-  top: 10rem;;
   left: 0;
   width: 25rem;
   height: 100%;
@@ -14,12 +13,14 @@
   padding: 2rem;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: white;
 }
 
 .sg_c-nav__section {
   font-family: "Telus Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   border-bottom: 0.1rem solid #e2e2e2;
+  padding-top: 1rem;
   padding-bottom: .5rem;
   margin: 1rem 0 1rem 0;
 }

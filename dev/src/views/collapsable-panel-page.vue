@@ -1,42 +1,62 @@
 <template>
   <section class="hy_c-module hy_t-grey">
    <div class="hy_o-wrapper">
-     <h2 class="hy_c-headline hy_c-headline--h2 hy_t-grey">Collapsable Panel</h2>
+     <h2 class="hy_c-headline hy_c-headline--h4 hy_t-grey">Collapsable Panel</h2>
      <hr class="hy_u-space-mb-2">
-     <collapsable-panel label="Tech terms explained" :is-open="true">
-       <p class="hy_c-copy hy_c-copy--body hy_t-grey">
-         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-       </p>
-       <p class="hy_c-copy hy_c-copy--body hy_t-grey">
-         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-       </p>
-       <p class="hy_c-copy hy_c-copy--body hy_t-grey">
-         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-       </p>
-     </collapsable-panel>
+     <div class="sg_c-demo hy_o-layout hy_o-layout--with-gutter hy_o-layout--flushed">
+         <div class="sg_c-demo__container">
+           <collapsable-panel label="Panel 1" :is-open="true">
+            Panel 1 content
+           </collapsable-panel>
 
-     <collapsable-panel label="Tech terms explained">
-       <p class="hy_c-copy hy_c-copy--body hy_t-grey">
-         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-       </p>
-     </collapsable-panel>
+           <collapsable-panel label="Panel 2">
+            Panel 2 content
+           </collapsable-panel>
+         </div>
+         <collapsable-panel label="HTML">
+           <pre>
+             <code class="language-html">
+               &lt;collapsable-panel label="Panel 1" :is-open="true"&gt;
+                 Panel 1 content
+               &lt;/collapsable-panel&gt;
+               &lt;collapsable-panel label="Panel 2"&gt;
+                 Panel 2 content
+               &lt;/collapsable-panel&gt;
+             </code>
+           </pre>
+         </collapsable-panel>
+      </div>
+      <h3 class="hy_c-headline hy_c-headline--h5 hy_t-grey">API</h3>
+      <div class="hy_o-layout hy_o-layout--with-gutter hy_o-layout--flushed">
+        <api-table :items="apiItems"></api-table>
+      </div>
 
-     <collapsable-panel label="Tech terms explained">
-       <p class="hy_c-copy hy_c-copy--body hy_t-grey">
-         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-       </p>
-     </collapsable-panel>
-
-     <collapsable-panel label="Tech terms explained">
-       <p class="hy_c-copy hy_c-copy--body hy_t-grey">
-         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-       </p>
-     </collapsable-panel>
    </div>
   </section>
 </template>
 
 <script>
+import ApiTable from '../components/api-table.vue';
 export default {
+  components: {
+    ApiTable
+  },
+  data() {
+    return {
+      apiItems: [{
+        name: 'label',
+        type: 'String',
+        isRequired: true,
+        default: 'n/a',
+        desc: 'The lable of the panel'
+      }, {
+        name: 'isOpen',
+        type: 'Boolean',
+        isRequired: false,
+        default: false,
+        desc: 'Is the panel open.'
+      }]
+    };
+  }
 };
 </script>

@@ -1,9 +1,6 @@
-
-/**
- * Namespace: `sg_c-`
- * Block: `main`
- * -----------------------------------------------------------------------------
- */
+body {
+  background-color: #f5f6f7;
+}
 .sg_c-site__main {
   margin-left: 25rem;
 }
@@ -12,28 +9,11 @@
   margin: 20px 0;
 }
 
-.sg_c-demo__container,  .sg_c-demo__snippet{
+.sg_c-demo__container {
+  background-color: white;
   overflow: hidden;
   border-radius: 5px;
   border: 1px solid #eee;
   padding: 25px;
   margin: 20px 0;
-}
-
-.sg_c-demo__snippet {
-}
-
-.sg_c-api-table {
-  width: 100%;
-  tr {
-    flex: 1;
-  }
-
-  th{
-    background-color: #eee;
-  }
-
-  td {
-    text-align: center;
-  }
 }
