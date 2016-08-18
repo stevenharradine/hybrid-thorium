@@ -1,0 +1,18 @@
+<div
+  v-if="isVisible"
+  transition="fade"
+  class="c-alert"
+  :class="'c-alert--' + type"
+  :class="{ 'c-alert--dismissible': dismissible }"
+  role="alert">
+    <button
+      v-if="dismissible"
+      @click="dismiss"
+      type="button"
+      class="c-alert__close-button"
+      aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="hy_u-invisible">Close</span>
+    </button>
+    <slot></slot>
+</div>

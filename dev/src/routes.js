@@ -4,10 +4,18 @@ import TabsPage from './views/tabs-page.vue';
 import LegalPage from './views/legal-page.vue';
 import OverlayPage from './views/overlay-page.vue';
 import CollapsablePanelPage from './views/collapsable-panel-page.vue';
+import AlertPage from './views/alert-page.vue';
+
 
 export default {
   '/': {
     component: Index
+  },
+  '/alert': {
+    component: {
+      template: '<alert-page></alert-page>',
+      components: { AlertPage }
+    }
   },
   '/step-tracker': {
     component: {

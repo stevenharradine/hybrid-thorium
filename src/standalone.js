@@ -8,6 +8,7 @@ import LegalContainer from './components/legal/legal-container.vue';
 import Tabs from './components/tab/tabs.vue';
 import Tab from './components/tab/tab.vue';
 import CollapsablePanel from './components/collapsable-panel/index.vue';
+import Alert from './components/alert/index.vue';
 
 module.exports = {
   Directives: {
@@ -22,6 +23,7 @@ module.exports = {
     LegalContainer,
     Tabs,
     Tab,
-    CollapsablePanel
+    CollapsablePanel,
+    Alert
   }
 };

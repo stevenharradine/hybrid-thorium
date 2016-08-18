@@ -1,0 +1,55 @@
+/**
+ * Namespace: `c-`
+ * Block: `alert`
+ * -----------------------------------------------------------------------------
+ */
+.c-alert {
+  position: relative;
+  padding: 7px 15px;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+
+  &--info {
+    background-color: hy_get-value($hy_colors, "grey", "33");
+    border-color: black;
+    color: hy_get-value($hy_colors, "grey", "ff");
+
+    button {
+      color: white;
+    }
+  }
+
+  &--success {
+    background-color: #e6ffcc;
+    border-color: #99ff33;
+    color: hy_get-value($hy_colors, "green", "40");
+  }
+
+  &--error {
+    background-color: hy_get-value($hy_colors, "state", "f8");
+    border-color: #f2c0ca;
+    color: hy_get-value($hy_colors, "state", "c8");
+  }
+
+  &--dismissible {
+
+  }
+}
+
+.c-alert__close-button {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  font-size: 2.5rem;
+  opacity: .2;
+
+  &:hover {
+    opacity: .3;
+  }
+}
