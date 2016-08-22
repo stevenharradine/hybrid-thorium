@@ -9,7 +9,7 @@ import Tabs from './components/tab/tabs.vue';
 import Tab from './components/tab/tab.vue';
 import CollapsablePanel from './components/collapsable-panel/index.vue';
 import Alert from './components/alert/index.vue';
-
+import Spinner from './components/spinner/index.vue';
 
 let components = {
   StepTracker,
@@ -20,7 +20,8 @@ let components = {
   Tabs,
   Tab,
   CollapsablePanel,
-  Alert
+  Alert,
+  Spinner
 };
 let directives = {
   overlayOpener,

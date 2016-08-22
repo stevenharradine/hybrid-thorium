@@ -1,0 +1,119 @@
+/**
+ * Namespace: `c-`
+ * Block: `spinner`
+ * -----------------------------------------------------------------------------
+ */
+
+@mixin animation($name, $duration, $iteration-count: "", $timing-function: "", $direction: "") {
+  animation-name: $name;
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  @if $iteration-count != "" {
+    animation-iteration-count: $iteration-count;
+    -webkit-animation-iteration-count: $iteration-count;
+    -moz-animation-iteration-count: $iteration-count;
+  }
+  @if $timing-function != "" {
+    animation-timing-function: $timing-function;
+    -webkit-animation-timing-function: $timing-function;
+    -moz-animation-timing-function: $timing-function;
+  }
+  @if $direction != "" {
+    animation-direction: $direction;
+    -webkit-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+  }
+}
+
+@mixin multiple-animation($param1, $param2) {
+  animation: #{$param1}, #{$param2};
+  -webkit-animation: #{$param1}, #{$param2};
+  -moz-animation: #{$param1}, #{$param2};
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(rotate) {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@include keyframes(dash) {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@include keyframes(spinner-color) {
+  100%, 0% {
+    stroke: hy_get-value($hy_colors, "green", "66");
+  }
+  25% {
+    stroke: hy_get-value($hy_colors, "green", "66");
+  }
+  50% {
+    stroke: hy_get-value($hy_colors, "green", "57");
+  }
+  75% {
+    stroke: hy_get-value($hy_colors, "green", "57");
+  }
+}
+
+.c-spinner {
+  display: flex;
+  align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.c-spinner--fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255, 0.8);
+
+}
+
+.c-spinner svg {
+  @include animation(rotate, 1.8s, infinite, linear);
+  height: 100px;
+  width: 100px;
+}
+
+.c-spinner circle {
+  @include multiple-animation("dash 1.7s ease-in-out infinite 0s", "spinner-color 6s ease-in-out infinite -0.75s");
+}
+
+.c-spinner__text {
+
+}

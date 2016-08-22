@@ -5,7 +5,7 @@ import LegalPage from './views/legal-page.vue';
 import OverlayPage from './views/overlay-page.vue';
 import CollapsablePanelPage from './views/collapsable-panel-page.vue';
 import AlertPage from './views/alert-page.vue';
-
+import SpinnerPage from './views/spinner-page.vue';
 
 export default {
   '/': {
@@ -15,6 +15,12 @@ export default {
     component: {
       template: '<alert-page></alert-page>',
       components: { AlertPage }
+    }
+  },
+  '/spinner': {
+    component: {
+      template: '<spinner-page></spinner-page>',
+      components: { SpinnerPage }
     }
   },
   '/step-tracker': {
