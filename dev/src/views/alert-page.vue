@@ -15,12 +15,12 @@
          <collapsable-panel label="HTML">
            <pre>
              <code class="language-html">
-           &lt;alert type="error"&gt;This is an error alert.&lt;/alert&gt;
-           &lt;alert type="info"&gt;This is an info alert.&lt;/alert&gt;
-           &lt;alert type="success"&gt;This is a success alert.&lt;/alert&gt;
-           &lt;alert type="success" :dismissible="false"&gt;This is not a dismissible alert.&lt;/alert&gt;
-           &lt;alert type="success" :on-closed="dismissCallBack"&gt;This is an alert with callback.&lt;/alert&gt;
-           &lt;alert type="success" :timeout="5000"&gt;This alert should timeout in 5 seconds.&lt;/alert&gt;
+&lt;alert type="error"&gt;This is an error alert.&lt;/alert&gt;
+&lt;alert type="info"&gt;This is an info alert.&lt;/alert&gt;
+&lt;alert type="success"&gt;This is a success alert.&lt;/alert&gt;
+&lt;alert type="success" :dismissible="false"&gt;This is not a dismissible alert.&lt;/alert&gt;
+&lt;alert type="success" :on-closed="dismissCallBack"&gt;This is an alert with callback.&lt;/alert&gt;
+&lt;alert type="success" :timeout="5000"&gt;This alert should timeout in 5 seconds.&lt;/alert&gt;
              </code>
            </pre>
          </collapsable-panel>

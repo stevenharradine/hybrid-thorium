@@ -26,23 +26,23 @@
          <collapsable-panel label="HTML">
            <pre>
              <code class="language-html">
-               &lt;tabs&gt;
-                 &lt;tab label="Tab 1"&gt;
-                   &lt;p&gt;
-                     Tab 1 content
-                   &lt;/p&gt;
-                 &lt;/tab&gt;
-                 &lt;tab label="Tab 2"&gt;
-                   &lt;p&gt;
-                     Tab 2 content
-                   &lt;/p&gt;
-                 &lt;/tab&gt;
-                 &lt;tab label="Tab 3" :is-disabled="true"&gt;
-                   &lt;p&gt;
-                     Tab 3 content
-                   &lt;/p&gt;
-                 &lt;/tab&gt;
-               &lt;/tabs&gt;
+&lt;tabs&gt;
+ &lt;tab label="Tab 1"&gt;
+   &lt;p&gt;
+     Tab 1 content
+   &lt;/p&gt;
+ &lt;/tab&gt;
+ &lt;tab label="Tab 2"&gt;
+   &lt;p&gt;
+     Tab 2 content
+   &lt;/p&gt;
+ &lt;/tab&gt;
+ &lt;tab label="Tab 3" :is-disabled="true"&gt;
+   &lt;p&gt;
+     Tab 3 content
+   &lt;/p&gt;
+ &lt;/tab&gt;
+&lt;/tabs&gt;
              </code>
            </pre>
          </collapsable-panel>

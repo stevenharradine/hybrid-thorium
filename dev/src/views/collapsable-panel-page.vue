@@ -16,12 +16,12 @@
          <collapsable-panel label="HTML">
            <pre>
              <code class="language-html">
-               &lt;collapsable-panel label="Panel 1" :is-open="true"&gt;
-                 Panel 1 content
-               &lt;/collapsable-panel&gt;
-               &lt;collapsable-panel label="Panel 2"&gt;
-                 Panel 2 content
-               &lt;/collapsable-panel&gt;
+&lt;collapsable-panel label="Panel 1" :is-open="true"&gt;
+ Panel 1 content
+&lt;/collapsable-panel&gt;
+&lt;collapsable-panel label="Panel 2"&gt;
+ Panel 2 content
+&lt;/collapsable-panel&gt;
              </code>
            </pre>
          </collapsable-panel>
