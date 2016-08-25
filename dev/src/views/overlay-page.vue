@@ -33,24 +33,24 @@
          <collapsable-panel label="HTML">
            <pre>
              <code class="language-html">
-               &lt;overlay-container&gt;
-                 &lt;overlay overlay-key="overlay-1"&gt;
-                   &lt;h4  class="hy_c-headline hy_c-headline--h4" slot="overlay-header"&gt;
-                   This is overlay #1
-                   &lt;/h4&gt;
-                   &lt;article slot="overlay-body"&gt;
-                     Overlay #1 body
-                   &lt;/article&gt;
-                 &lt;/overlay&gt;
-                 &lt;overlay overlay-key="overlay-2"&gt;
-                   &lt;h4  class="hy_c-headline hy_c-headline--h4" slot="overlay-header"&gt;
-                   This is overlay #1
-                   &lt;/h4&gt;
-                   &lt;article slot="overlay-body"&gt;
-                     Overlay #2 body
-                   &lt;/article&gt;
-                 &lt;/overlay&gt;
-               &lt;/overlay-container&gt;
+&lt;overlay-container&gt;
+ &lt;overlay overlay-key="overlay-1"&gt;
+   &lt;h4  class="hy_c-headline hy_c-headline--h4" slot="overlay-header"&gt;
+   This is overlay #1
+   &lt;/h4&gt;
+   &lt;article slot="overlay-body"&gt;
+     Overlay #1 body
+   &lt;/article&gt;
+ &lt;/overlay&gt;
+ &lt;overlay overlay-key="overlay-2"&gt;
+   &lt;h4  class="hy_c-headline hy_c-headline--h4" slot="overlay-header"&gt;
+   This is overlay #1
+   &lt;/h4&gt;
+   &lt;article slot="overlay-body"&gt;
+     Overlay #2 body
+   &lt;/article&gt;
+ &lt;/overlay&gt;
+&lt;/overlay-container&gt;
              </code>
            </pre>
          </collapsable-panel>

@@ -12,6 +12,14 @@ import Alert from './components/alert/index.vue';
 import Spinner from './components/spinner/index.vue';
 
 module.exports = {
+  install(Vue) {
+    for (let name in this.Components) {
+      Vue.component(name, this.Components[name]);
+    }
+    for (let name in this.Directives) {
+      Vue.directive(name, this.Directives[name]);
+    }
+  },
   Directives: {
     overlayOpener,
     setFocus

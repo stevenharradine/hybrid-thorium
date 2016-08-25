@@ -10,51 +10,51 @@
          <collapsable-panel label="HTML">
        <pre>
          <code class="language-html">
-          &lt;step-tracker
-          :current-step="stepTrackerCurrentStep"
-          :config="stepTrackerConfig"&gt;
-          &lt;/step-tracker&gt;
+&lt;step-tracker
+:current-step="stepTrackerCurrentStep"
+:config="stepTrackerConfig"&gt;
+&lt;/step-tracker&gt;
          </code>
        </pre>
          </collapsable-panel>
          <collapsable-panel label="javascript">
            <pre>
              <code class="language-js">
-              let stepTrackerCurrentStep = 2;
-              let stepTrackerConfig = {
-                isClickable: true,
-                steps: [
-                  {
-                    title: 'Step A',
-                    link: '',
-                    onClickHandler: (event) => {
-                      this.stepTrackerCurrentStep = 0;
-                    }
-                  }, {
-                    title: 'Step B',
-                    link: '',
-                    onClickHandler: (event) => {
-                      this.stepTrackerCurrentStep = 1;
-                    }
-                  }, {
-                    title: 'Step C',
-                    link: '',
-                    onClickHandler: (event) => {
-                      this.stepTrackerCurrentStep = 2;
-                    }
-                  }
-                ]
-              };
-              let vm = new Vue({
-                el: 'body',
-                data: {
-                  stepTrackerConfig,
-                  stepTrackerCurrentStep
-              },
-                components: {
-                  StepTracker
-                }
-              });
+let stepTrackerCurrentStep = 2;
+let stepTrackerConfig = {
+  isClickable: true,
+  steps: [
+    {
+      title: 'Step A',
+      link: '',
+      onClickHandler: (event) => {
+        this.stepTrackerCurrentStep = 0;
+      }
+    }, {
+      title: 'Step B',
+      link: '',
+      onClickHandler: (event) => {
+        this.stepTrackerCurrentStep = 1;
+      }
+    }, {
+      title: 'Step C',
+      link: '',
+      onClickHandler: (event) => {
+        this.stepTrackerCurrentStep = 2;
+      }
+    }
+  ]
+};
+let vm = new Vue({
+  el: 'body',
+  data: {
+    stepTrackerConfig,
+    stepTrackerCurrentStep
+},
+  components: {
+    StepTracker
+  }
+});
              </code>
            </pre>
          </collapsable-panel>

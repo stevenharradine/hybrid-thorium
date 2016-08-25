@@ -25,31 +25,31 @@
          <collapsable-panel label="HTML">
            <pre>
              <code class="language-html">
-               &lt;legal-counter&gt;
-                  legal-key="hs-referral-terms"
-                  legal-lang="en"
-                  legal-region="bc"
-               &lt;/legal-counter&gt;
-               &lt;legal-container&gt;&lt;/legal-container&gt;
+&lt;legal-counter
+  legal-key="hs-referral-terms"
+  legal-lang="en"
+  legal-region="bc"
+&lt;/legal-counter&gt;
+&lt;legal-container&gt;&lt;/legal-container&gt;
              </code>
            </pre>
          </collapsable-panel>
          <collapsable-panel label="javascript">
            <pre>
              <code class="language-javascript">
-               let vm = new Vue({
-                 el: 'body',
-                 data() {
-                   return {
-                     ligerEndPoint: 'https://api.cms.telus.com/legals',
-                     ligerApplicationKey: 'b9738d67b89dfc782746d4a9cf4a1093'
-                   };
-                 },
-                 components: {
-                   LegalCounter,
-                   LegalContainer
-                 }
-               });
+let vm = new Vue({
+ el: 'body',
+ data() {
+   return {
+     ligerEndPoint: 'https://api.cms.telus.com/legals',
+     ligerApplicationKey: 'b9738d67b89dfc782746d4a9cf4a1093'
+   };
+ },
+ components: {
+   LegalCounter,
+   LegalContainer
+ }
+});
              </code>
            </pre>
          </collapsable-panel>

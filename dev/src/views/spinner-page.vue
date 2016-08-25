@@ -22,7 +22,7 @@
          <collapsable-panel label="HTML">
            <pre>
              <code class="language-html">
-               &lt;spinner text="I will close in 3 seconds" :full-screen="true"&gt;&lt;/spinner&gt;
+&lt;spinner text="I will close in 3 seconds" :full-screen="true"&gt;&lt;/spinner&gt;
              </code>
            </pre>
          </collapsable-panel>
