@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       dismissCallBack() {
-        window.alert('alert dismissed.');
+        console.log('alert!!!');
       },
       apiItems: [{
         name: 'type',
