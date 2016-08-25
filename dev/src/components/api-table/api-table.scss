@@ -1,7 +1,11 @@
 .sg_c-api-table {
+  border-spacing: 0 10px;
   width: 100%;
   tr {
     flex: 1;
+    &:hover {
+      background-color: #eee;
+    }
   }
 
   th{

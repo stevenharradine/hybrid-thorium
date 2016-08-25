@@ -68,7 +68,7 @@
 </template>
 
 <script>
-import ApiTable from '../components/api-table.vue';
+import ApiTable from '../components/api-table/index.vue';
 export default {
   components: {
     ApiTable

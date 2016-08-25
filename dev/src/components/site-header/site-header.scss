@@ -1,0 +1,22 @@
+header.sg_c-site-header {
+  background-color: #4b286d;
+  height: 68px;
+  text-align: left;
+  position:fixed;
+  width: 100%;
+  z-index: 9999;
+
+  .sg_c-site-header-container {
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+
+    img.logo {
+      height: 100%;
+      padding: 20px;
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+
+}
