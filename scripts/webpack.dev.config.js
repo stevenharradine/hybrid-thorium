@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../dev/app'),
-        publicPath: '/hybrid-thorium/dev/app',
+        publicPath: '/hybrid-thorium/dev/app/',
         filename: 'app.js'
     },
     module: {
