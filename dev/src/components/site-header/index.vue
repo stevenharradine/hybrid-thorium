@@ -7,5 +7,10 @@
 
 <script>
 export default {
+  methods: {
+    toggleNav() {
+      this.$root.$broadcast('toggle::siteNav');
+    }
+  }
 };
 </script>

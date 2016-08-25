@@ -5,7 +5,12 @@ body {
 .sg_c-site__main {
   padding-top: 68px;
   margin-left: 25rem;
+  @include hy_media-below("md") {
+    margin-left: 0;
+  }
+
 }
+
 
 .sg_c-demo {
   margin: 20px 0;

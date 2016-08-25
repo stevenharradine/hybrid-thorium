@@ -6,10 +6,9 @@ header.sg_c-site-header {
   width: 100%;
   z-index: 9999;
 
-  .sg_c-site-header-container {
+  .sg_c-site-header__container {
     height: 100%;
     width: 100%;
-    padding: 0 10px;
 
     img.logo {
       height: 100%;
@@ -18,5 +17,16 @@ header.sg_c-site-header {
       max-width: 100%;
     }
   }
-
+  .sg_c-site-header__togglebtn {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    background: rgba(255, 255, 255, .1);
+    padding: 1.5rem;
+    float: left;
+    cursor: pointer;
+    border: 0;
+    height: 100%;
+    display: inline-block;
+  }
 }
