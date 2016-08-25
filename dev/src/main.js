@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import routes from './routes';
 import HybridThorium from 'hybrid-thorium';
 import Prism from 'prismjs';
+import SideNav from './components/side-nav/index.vue';
+import SiteHeader from './components/site-header/index.vue';
 Vue.config.debug = true;
 
 Vue.use(VueRouter);
@@ -10,6 +12,10 @@ Vue.use(HybridThorium);
 
 let router = new VueRouter();
 let App = Vue.extend({
+  components: {
+    SideNav,
+    SiteHeader
+  },
   data() {
     return {
       ligerEndPoint: 'https://api.cms.telus.com/legals',

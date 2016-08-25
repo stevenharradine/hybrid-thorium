@@ -30,6 +30,9 @@ module.exports = {
                 plugins: ['transform-runtime']
             }
         }, {
+            test: /.*\.(gif|png|jpe?g|svg)$/i,
+            loader: 'file'
+        }, {
             test: /\.vue$/,
             loader: 'vue'
         }]

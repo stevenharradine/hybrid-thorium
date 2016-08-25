@@ -17,7 +17,7 @@
 
 
 
-           <spinner :full-screen="isFullScreen" text="I will close in 3 seconds"></spinner>
+           <spinner :full-screen="isFullScreen" :text="msg"></spinner>
          </div>
          <collapsable-panel label="HTML">
            <pre>
@@ -37,21 +37,35 @@
 </template>
 
 <script>
-import ApiTable from '../components/api-table.vue';
+import ApiTable from '../components/api-table/index.vue';
 export default {
   components: {
     ApiTable
   },
   methods: {
     showSpinner() {
+      this._resetMsg();
       this.$root.$broadcast('show::spinner');
       setTimeout(() => {
         this.$root.$broadcast('hide::spinner');
       }, 3000);
+    },
+    _resetMsg() {
+      let counter = 3;
+      let interval = setInterval(() => {
+        if (counter > 0) {
+          counter --;
+          this.msg = `I will close in ${counter} seconds`;
+        } else {
+          clearInterval(interval);
+        }
+      }, 1000);
+      this.msg = `I will close in ${counter} seconds`;
     }
   },
   data() {
     return {
+      msg: '',
       isFullScreen: false,
       apiItems: [{
         name: 'fullScreen',
