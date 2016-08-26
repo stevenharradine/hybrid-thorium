@@ -76,8 +76,7 @@ new Vue({
     </p>
     <pre>
       <code class="language-javascript">
-import Vue from 'vue';
-import HybridThorium from 'hybrid-thorium';
+//app.js
 
 Vue.use(HybridThorium);
 
