@@ -7,6 +7,7 @@ import LegalOverlayPage from './views/legal-overlay-page.vue';
 import CollapsablePanelPage from './views/collapsable-panel-page.vue';
 import AlertPage from './views/alert-page.vue';
 import SpinnerPage from './views/spinner-page.vue';
+import HyHeaderPage from './views/hy-header-page.vue';
 
 export default {
   '/get-started': {
@@ -58,6 +59,12 @@ export default {
     component: {
       template: '<collapsable-panel-page></collapsable-panel-page>',
       components: { CollapsablePanelPage }
+    }
+  },
+  '/hy-header': {
+    component: {
+      template: '<hy-header-page></hy-header-page>',
+      components: { HyHeaderPage }
     }
   }
 };
