@@ -7,13 +7,11 @@
          <div class="sg_c-demo__container">
            <p class="hy_c-copy hy_c-copy--body hy_t-grey">
              Lorem ipsum<legal-counter
-               v-overlay-opener="legal-overlay"
                legal-key="hs-referral-terms"
                legal-lang="en" legal-region="bc"
                ></legal-counter> dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              <legal-counter
-               v-overlay-opener="legal-overlay"
                legal-key="1-year-offer-stim"
                legal-lang="en" legal-region="bc"
                ></legal-counter>

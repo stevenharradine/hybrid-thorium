@@ -3,6 +3,7 @@ import StepTrackerPage from './views/step-tracker-page.vue';
 import TabsPage from './views/tabs-page.vue';
 import LegalPage from './views/legal-page.vue';
 import OverlayPage from './views/overlay-page.vue';
+import LegalOverlayPage from './views/legal-overlay-page.vue';
 import CollapsablePanelPage from './views/collapsable-panel-page.vue';
 import AlertPage from './views/alert-page.vue';
 import SpinnerPage from './views/spinner-page.vue';
@@ -45,6 +46,12 @@ export default {
     component: {
       template: '<overlay-page></overlay-page>',
       components: { OverlayPage }
+    }
+  },
+  '/legal-overlay': {
+    component: {
+      template: '<legal-overlay-page></legal-overlay-page>',
+      components: { LegalOverlayPage }
     }
   },
   '/collapsable-panel': {
