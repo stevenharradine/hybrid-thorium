@@ -29,4 +29,9 @@ router.afterEach(() => {
     Prism.highlightAll();
   }, 0);
 });
+router.redirect({
+  '*': '/get-started'
+});
 router.start(App, '#app-main');
+
+// router.go('/get-started');

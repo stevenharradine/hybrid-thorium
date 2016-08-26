@@ -1,11 +1,14 @@
-<nav class="sg_c-nav hy_u-hide hy_u-show@md">
-  <h2 class="sg_c-nav__section">COMPONENTS</h2>
+<nav class="sg_c-nav hy_u-hide hy_u-show@md" @click="hideNav">
+  <h2 class="sg_c-nav__section">INTRODUCTION</h2>
   <ul class="hy_o-list" @click="hideNav">
     <li class="sg_c-nav__list-item">
-      <a class="sg_c-nav__link" v-link="{path: '/', activeClass: 'sg_c-nav__link--active'}" >
+      <a class="sg_c-nav__link" v-link="{path: '/get-started', activeClass: 'sg_c-nav__link--active'}" >
         Get Started
       </a>
     </li>
+  </ul>
+  <h2 class="sg_c-nav__section">COMPONENTS</h2>
+  <ul class="hy_o-list">
     <li class="sg_c-nav__list-item">
       <a class="sg_c-nav__link" v-link="{path: '/alert', activeClass: 'sg_c-nav__link--active'}" >
         Alert
