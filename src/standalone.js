@@ -10,6 +10,7 @@ import Tab from './components/tab/tab.vue';
 import CollapsablePanel from './components/collapsable-panel/index.vue';
 import Alert from './components/alert/index.vue';
 import Spinner from './components/spinner/index.vue';
+import HyHeader from './components/hy-header/index.vue';
 
 module.exports = {
   install(Vue) {
@@ -34,6 +35,7 @@ module.exports = {
     Tab,
     CollapsablePanel,
     Alert,
-    Spinner
+    Spinner,
+    HyHeader
   }
 };
