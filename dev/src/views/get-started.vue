@@ -35,8 +35,6 @@ new Vue({
 import Vue from 'vue';
 import { Alert, StepTracker } from 'hybrid-thorium';
 
-Vue.use(HybridThorium);
-
 new Vue({
   el: '#app',
   components: {
