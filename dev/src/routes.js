@@ -1,4 +1,4 @@
-import Index from './views/index.vue';
+import GetStarted from './views/get-started.vue';
 import StepTrackerPage from './views/step-tracker-page.vue';
 import TabsPage from './views/tabs-page.vue';
 import LegalPage from './views/legal-page.vue';
@@ -8,8 +8,8 @@ import AlertPage from './views/alert-page.vue';
 import SpinnerPage from './views/spinner-page.vue';
 
 export default {
-  '/': {
-    component: Index
+  '/get-started': {
+    component: GetStarted
   },
   '/alert': {
     component: {

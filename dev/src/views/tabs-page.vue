@@ -5,7 +5,7 @@
      <hr class="hy_u-space-mb-2">
      <div class="sg_c-demo hy_o-layout hy_o-layout--with-gutter hy_o-layout--flushed">
          <div class="sg_c-demo__container">
-           <tabs class="c-price-lookup hy_o-layout__item  hy_u-size-3of3@sm hy_u-size-3of4@md hy_u-size-4of12@lg">
+           <tabs class="c-price-lookup hy_o-layout__item  hy_u-size-3of3@sm hy_u-size-4of4@md hy_u-size-6of12@lg">
              <tab label="Tab 1">
               <p>
                 Tab 1 content
