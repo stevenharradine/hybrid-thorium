@@ -6,8 +6,10 @@
 <template src="./spinner.html"></template>
 
 <script>
+import mixins from '../../mixins';
 export default {
   replace: true,
+  mixins,
   data() {
     return {
       active: false
@@ -26,11 +28,11 @@ export default {
   methods: {
     show() {
       this.active = true;
-      this.$root.$broadcast('shown::spinner');
+      this.rootBroadcast('shown::spinner');
     },
     hide() {
       this.active = false;
-      this.$root.$broadcast('hidden::spinner');
+      this.rootBroadcast('hidden::spinner');
     }
   },
   events: {

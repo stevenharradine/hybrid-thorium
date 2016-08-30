@@ -1,0 +1,11 @@
+<header>
+  <template v-if="isContentLoaded">
+    <calamity-bar v-if="showCalamity" :data="data.calamity"></calamity-bar>
+    <notification-bubble></notification-bubble>
+    <region-select></region-select>
+    <global-nav></global-nav>
+    <mega-nav-desktop></mega-nav-desktop>
+    <mega-nav-mobile></mega-nav-mobile>
+    <search-bar></search-bar>
+  </template>
+</header>
