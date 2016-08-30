@@ -16,7 +16,7 @@ import RegionSelect from './region-select/index.vue';
 import mixins from '../../mixins';
 
 import ContentEn from 'json!./content-en.json';
-
+import * as constants from './header-constants';
 
 export default {
   mixins,
@@ -54,6 +54,10 @@ export default {
       return !!this.data.calamity.content;
     },
     showNotification() {
+      return !this.getCookie(constants.REGION_DETECT_NOTIFICATION_COOKIE);
+    },
+    getNotificationBubbleContent() {
+      return 'something';
     }
   },
   methods: {
@@ -61,12 +65,20 @@ export default {
       if (this.lang.toLowerCase() === 'en') {
         this.data = ContentEn;
       }
+    },
+    setLocale() {
+      let BrowserProfileCookie = this.getCookie(constants.BROWSER_PROFILE_COOKIE);
+      if (!!BrowserProfileCookie) {
+        let userProfile = JSON.parse(JSON.parse(BrowserProfileCookie));
+        this.lang = userProfile.language || 'en';
+        this.region = userProfile.region || 'bc';
+      }
     }
   },
   ready() {
+    this.setLocale();
     this.loadContent();
     this.isContentLoaded = true;
-    // console.log(this.content);
   }
 };
 </script>
