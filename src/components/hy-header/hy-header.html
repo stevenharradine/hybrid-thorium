@@ -1,8 +1,8 @@
 <header>
   <template v-if="isContentLoaded">
-    <calamity-bar v-if.once="showCalamity" :data="data.calamity"></calamity-bar>
+    <calamity-bar v-if.once="showCalamity" :data="data.calamityBar"></calamity-bar>
     <notification-bubble v-if.once="showNotification" :data="getNotificationBubbleContent"></notification-bubble>
-    <region-select></region-select>
+    <region-select :current-region="region" :current-lang="lang" :data="data.regionSelect"></region-select>
     <global-nav></global-nav>
     <mega-nav-desktop></mega-nav-desktop>
     <mega-nav-mobile></mega-nav-mobile>

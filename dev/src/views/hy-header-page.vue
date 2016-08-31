@@ -5,7 +5,7 @@
      <hr class="hy_u-space-mb-2">
      <div class="sg_c-demo hy_o-layout hy_o-layout--with-gutter hy_o-layout--flushed">
          <div class="sg_c-demo__container">
-           <hy-header :lang="'en'" :region="'bc'" :application="'FFH'"></hy-header>
+           <hy-header :lang="'en'" :region="'bc'" :application="'personal'" :analytics="'marketing'"></hy-header>
          </div>
          <collapsable-panel label="HTML">
            <pre>

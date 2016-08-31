@@ -14,7 +14,6 @@ export default {
     }
   },
   ready() {
-    console.log(this.data);
   }
 };
 </script>

@@ -63,22 +63,6 @@
     }
   },
   "globalNav": {
-    "links": [{
-      "title": "Personal",
-      "href": "https://www.telus.com",
-      "hasSubNav": false,
-      "analyticsTags": {
-        "marketing": "092015_Consum_Global_TopNav1_Personal",
-        "myaccount": "092015_MyAcct_Global_TopNav1_Personal"
-      }
-    },{
-      "title": "Business",
-      "href": "http://business.telus.com",
-      "hasSubNav": false,
-      "analyticsTags": {
-        "marketing": "092015_Consum_Global_TopNav1_Business",
-        "myaccount": "092015_MyAcct_Global_TopNav1_Business"
-      }
-    }]
+
   }
 }

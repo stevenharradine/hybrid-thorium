@@ -13,7 +13,7 @@ export default {
   mixins,
   props: {
     data: {
-      type: String,
+      type: Object,
       required: true
     }
   },
@@ -32,6 +32,8 @@ export default {
         hoursExp: 24 * 7
       });
     }
+  },
+  ready() {
   }
 };
 </script>

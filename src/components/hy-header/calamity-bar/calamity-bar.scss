@@ -4,4 +4,8 @@
  * -----------------------------------------------------------------------------
  */
 .c-calamity-bar {
+  background-color: hy_get-value($hy_colors, "grey", "33");
+  width: 100%;
+  color: hy_get-value($hy_colors, "grey", "ff");
+  padding: 5px 10px;
 }

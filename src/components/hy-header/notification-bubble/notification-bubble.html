@@ -1,7 +1,7 @@
 <div class="c-notification-bubble" v-if="isVisible">
-  <span class="c-notification-bubble__copy" v-html="data"></span>
+  <span class="c-notification-bubble__copy" v-html="data.content"></span>
   <a href="#" class="c-notification-bubble__close" @click.prevent="closeNotification">
     <span aria-hidden="true">&times;</span>
-    <span class="hy_u-invisible">Close</span>
+    <span class="hy_u-invisible">{{data.closeBtnTitle}}</span>
   </a>
 </div>

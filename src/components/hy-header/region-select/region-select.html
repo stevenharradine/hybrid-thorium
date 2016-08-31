@@ -1,0 +1,43 @@
+<div class="c-region-select" :class="{'c-region-select--active': isVisible}">
+  <!-- mobile view -->
+  <section class="c-region-select__mobile">
+    <div class="c-region-select__mobile-lang-dropdown" v-if="isLangSelectionAvailable">
+      <label for="mobile-language-select-dropdown">{{data.languages.label}}</label>
+      <select name="mobile-language-select-dropdown" v-model="currentLang">
+        <option :value="lang.shortTitle" v-for="lang in data.languages.links">{{lang.title}}</option>
+      </select>
+    </div>
+    <div class="c-region-select__mobile-region-dropdown">
+      <label for="mobile-region-select-dropdown">{{data.regions.label}}</label>
+      <select name="mobile-region-select-dropdown" v-model="currentRegion">
+        <option :value="region.shortTitle" v-for="region in data.regions.links">{{region.title}}</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Desktop view -->
+  <section class="c-region-select__desktop">
+    <div class="c-region-select__desktop-lang-links" v-if="isLangSelectionAvailable">
+      <h3>{{data.languages.label}}</h3>
+      <ul>
+        <template v-for="lang in data.languages.links">
+          <li v-if="lang.shortTitle !== currentLang">
+            <a :href="getUpdateLangUrl(lang.shortTitle)">{{lang.title}}</a>
+          </li>
+          <li v-else>{{lang.title}}</li>
+        </template>
+      </ul>
+    </div>
+    <div class="c-region-select__desktop-region-links">
+      <h3>{{data.regions.label}}</h3>
+      <ul>
+        <template v-for="region in data.regions.links">
+          <li v-if="region.shortTitle !== currentRegion">
+            <a :href="getUpdateRegionUrl(region.shortTitle)">{{region.title}}</a>
+          </li>
+          <li v-else>{{region.title}}</li>
+        </template>
+      </ul>
+    </div>
+  </section>
+</div>
