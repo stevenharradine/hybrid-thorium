@@ -11,7 +11,6 @@ import NotificationBubble from './notification-bubble/index.vue';
 import GlobalNav from './global-nav/index.vue';
 import MegaNavDesktop from './mega-nav/desktop.vue';
 import MegaNavMobile from './mega-nav/mobile.vue';
-import SearchBar from './search-bar/index.vue';
 import RegionSelect from './region-select/index.vue';
 import mixins from '../../mixins';
 
@@ -27,7 +26,6 @@ export default {
     GlobalNav,
     MegaNavDesktop,
     MegaNavMobile,
-    SearchBar,
     RegionSelect
   },
   props: {
