@@ -5,6 +5,8 @@ import HybridThorium from 'hybrid-thorium';
 import Prism from 'prismjs';
 import SideNav from './components/side-nav/index.vue';
 import SiteHeader from './components/site-header/index.vue';
+import fullScreenToggler from './components/full-screen-toggler/index.vue';
+
 Vue.config.debug = true;
 
 Vue.use(VueRouter);
@@ -14,10 +16,18 @@ let router = new VueRouter();
 let App = Vue.extend({
   components: {
     SideNav,
-    SiteHeader
+    SiteHeader,
+    fullScreenToggler
+  },
+  events: {
+    'fullScreen::toggle'() {
+      console.log('hmm');
+      this.isFullScreenMode = !this.isFullScreenMode;
+    }
   },
   data() {
     return {
+      isFullScreenMode: false,
       ligerEndPoint: 'https://api.cms.telus.com/legals',
       ligerApplicationKey: 'b9738d67b89dfc782746d4a9cf4a1093'
     };

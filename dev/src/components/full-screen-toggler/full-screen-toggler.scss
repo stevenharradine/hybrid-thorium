@@ -1,0 +1,15 @@
+.c-fullscreen-toggler {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4b286d;
+  border: 1px solid white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  z-index: 9999;
+
+  a {
+    color: white;
+  }
+}
