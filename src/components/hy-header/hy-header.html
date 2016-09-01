@@ -3,7 +3,7 @@
     <calamity-bar v-if.once="showCalamity" :data="data.calamityBar"></calamity-bar>
     <notification-bubble v-if.once="showNotification" :data="getNotificationBubbleContent"></notification-bubble>
     <region-select :current-region="region" :current-lang="lang" :data="data.regionSelect"></region-select>
-    <global-nav></global-nav>
+    <global-nav :current-lang="lang" :data="data.globalNav" :application="application" :analytics="analytics"></global-nav>
     <mega-nav-desktop></mega-nav-desktop>
     <mega-nav-mobile></mega-nav-mobile>
     <search-bar></search-bar>

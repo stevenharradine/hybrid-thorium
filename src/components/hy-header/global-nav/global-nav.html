@@ -1,3 +1,18 @@
-<div>
-  This is global nav
-</div>
+<ul class="c-global-nav">
+  <template v-for="link in data.links">
+    <li class="c-global-nav__link" v-if="link.title.toLowerCase() !== application.toLowerCase()">
+      <template v-if="!link.hasSubNav">
+        <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
+      </template>
+      <template v-if="link.hasSubNav">
+        <a href="#" @click.prevent="toggleSubNav(link)">{{link.title}}</a>
+        <ul class="c-global-nav__subnav" v-show="link.isSubNavVisible">
+          <li v-for="subNav in link.subNav" class="c-global-nav__subnav-link">
+            <a :href="getLinkHrefWithAnalyticTag(subNav)">{{subNav.title}}</a>
+          </li>
+        </ul>
+      </template>
+    </li>
+    <li v-else class="c-global-nav__link c-global-nav__link--active">{{link.title}}</li>
+  </template>
+</ul>

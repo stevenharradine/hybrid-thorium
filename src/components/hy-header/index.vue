@@ -42,6 +42,10 @@ export default {
     application: {
       type: String,
       required: true
+    },
+    analytics: {
+      type: String,
+      required: true
     }
   },
   data() {
@@ -78,6 +82,7 @@ export default {
       } else {
         this.data = ContentFr;
       }
+      this.isContentLoaded = true;
     },
     setLocale() {
       let BrowserProfileCookie = this.getCookie(constants.BROWSER_PROFILE_COOKIE);
@@ -89,9 +94,9 @@ export default {
     }
   },
   ready() {
+    console.log(this.analytics);
     this.setLocale();
     this.loadContent();
-    this.isContentLoaded = true;
   }
 };
 </script>

@@ -1,6 +1,7 @@
 {
   "calamityBar": {
-    "content": "This is testing data.<a href=\"http://google.ca\">TEST</a>"
+    "url": "https://www.telus.com",
+    "content": "This is testing data."
   },
   "notificationBubble": {
     "closeBtnTitle": "Close region select notification",
@@ -71,13 +72,382 @@
         "marketing": "092015_Consum_Global_TopNav1_Personal",
         "myaccount": "092015_MyAcct_Global_TopNav1_Personal"
       }
-    },{
+    }, {
       "title": "Business",
       "href": "http://business.telus.com",
       "hasSubNav": false,
       "analyticsTags": {
         "marketing": "092015_Consum_Global_TopNav1_Business",
         "myaccount": "092015_MyAcct_Global_TopNav1_Business"
+      }
+    }, {
+      "title": "Careers",
+      "href": "https://careers.telus.com",
+      "hasSubNav": false,
+      "analyticsTags": {
+        "marketing": "072016_Consum_Global_TopNav1_Careers",
+        "myaccount": "072016_MyAcct_Global_TopNav1_Careers"
+      }
+    }, {
+      "title": "Other TELUS sites",
+      "href": "#",
+      "hasSubNav": true,
+      "subNav": [{
+        "title": "About us",
+        "href": "http://about.telus.com",
+        "analyticsTags": {
+          "marketing": "092015_Consum_Global_TopNav1_AboutTEL",
+          "myaccount": "092015_MyAcct_Global_TopNav1_AboutTEL"
+        }
+      }, {
+        "title": "We Give Where We Live™",
+        "href": "http://community.telus.com",
+        "analyticsTags": {
+          "marketing": "092015_Consum_Global_TopNav1_WeGive",
+          "myaccount": "092015_MyAcct_Global_TopNav1_WeGive"
+        }
+      }, {
+        "title": "TELUS Health",
+        "href": "https://telushealth.co",
+        "analyticsTags": {
+          "marketing": "092015_Consum_Global_TopNav1_Health",
+          "myaccount": "092015_MyAcct_Global_TopNav1_Health"
+        }
+      }, {
+        "title": "TELUS International",
+        "href": "http://www.telusinternational.com",
+        "analyticsTags": {
+          "marketing": "092015_Consum_Global_TopNav1_InterNat",
+          "myaccount": "092015_MyAcct_Global_TopNav1_InterNat"
+        }
+      }]
+    }]
+  },
+  "megaNav": {
+    "primaryNavLinks": [{
+      "title": "Shop",
+      "mobileOrder": 2,
+      "href": "#",
+      "hasSecondaryNav": true,
+      "secondaryNavLinks": {
+        "mobility": {
+          "title": "Mobility",
+          "icon": "",
+          "href": "",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": true,
+          "tertiaryNavLinks": {
+            "groups": [{
+              "links": [{
+                "title": "Phones",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Accessories",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "SIM Cards",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Tablets",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }]
+            }, {
+              "links": [{
+                "title": "Plans",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Prepaid",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Add-ons & Apps",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Network & coverage",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Travel",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Why TELUS?",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }]
+            }]
+          }
+        },
+        "optiktv": {
+          "title": "Optik TV",
+          "icon": "",
+          "href": "",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": true,
+          "tertiaryNavLinks": {
+            "groups": [{
+              "links": [{
+                "title": "Combos",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Channels",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Hardware",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Apps",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "On Demand",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "TV Highlights",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Pay Per View",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }]
+            }]
+          }
+        },
+        "sattv": {
+          "title": "Satellite TV",
+          "icon": "",
+          "availableInEast": false,
+          "href": "",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": false
+        },
+        "internet": {
+          "title": "Internet",
+          "icon": "",
+          "href": "",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": true,
+          "tertiaryNavLinks": {
+            "groups": [{
+              "links": [{
+                "title": "Plans",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Add-ons",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Mobile Internet",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }]
+            }]
+          }
+        },
+        "homePhone": {
+          "title": "Home Phone",
+          "icon": "",
+          "href": "",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": true,
+          "tertiaryNavLinks": {
+            "groups": [{
+              "links": [{
+                "title": "Plans and Features",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }, {
+                "title": "Long Distance Plans",
+                "href": "",
+                "analyticsTags": {
+                  "marketing": "",
+                  "myaccount": ""
+                }
+              }]
+            }]
+          }
+        },
+        "dealBundles": {
+          "title": "Deals & Bundles",
+          "icon": "",
+          "availableInEast": false,
+          "href": "http://www.telus.com/deals",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": false,
+          "desc": "Only TELUS lets you bundle TV, Internet, Home Phone and Mobility services to save you money.",
+          "imgSrc": "http://static.telus.com/common/images/nav/bundle-services.png",
+          "imgAlt": "Bundled TELUS services",
+          "linkTitle": "Learn more",
+          "linkUrl": "http://www.telus.com/deals"
+        },
+        "residentalServices": {
+          "title": "Residential Services",
+          "icon": "",
+          "availableInEast": false,
+          "href": "http://www.telus.com/deals",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": false,
+          "desc": "Only TELUS lets you bundle TV, Internet, Home Phone and Mobility services to save you money.",
+          "imgSrc": "http://static.telus.com/common/images/header/residential-service.jpg",
+          "imgAlt": "Featured image",
+          "linkTitle": "Learn more",
+          "linkUrl": "http://www.telusquebec.com"
+        },
+        "mobileInternet": {
+          "title": "Mobile Internet",
+          "icon": "",
+          "href": "http://www.telus.com/mobility/mobile-internet",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": false,
+          "desc": "See our most popular Mobile Internet keys, Hotspots, and Smart hubs.",
+          "linkTitle": "Learn more",
+          "linkUrl": "http://www.telus.com/mobility/mobile-internet"
+        },
+        "deals": {
+          "title": "Deals",
+          "icon": "",
+          "href": "http://www.telus.com/deals",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": false,
+          "desc": "Now's the time to get the hottest smartphones on a 2 year term.",
+          "linkTitle": "Learn more",
+          "linkUrl": "http://www.telus.com/deals"
+        },
+        "dealsWithImg": {
+          "title": "Deals",
+          "icon": "",
+          "href": "http://www.telus.com/deals",
+          "analyticsTags": {
+            "marketing": "",
+            "myaccount": ""
+          },
+          "hasTertiaryNav": false,
+          "desc": "Now's the time to get the hottest smartphones on a 2 year term.",
+          "linkTitle": "Learn more",
+          "linkUrl": "http://www.telus.com/deals",
+          "imgSrc": "http://static.telus.com/common/images/nav/deals-smartphones.jpg",
+          "imgAlt": "Smartphones"
+        }
+      }
+    }, {
+      "title": "My Account",
+      "mobileOrder": 1,
+      "href": "http://www.telus.com/my-account",
+      "hasSecondaryNav": false,
+      "analyticsTags": {
+        "marketing": "MegaNavsslogin",
+        "myaccount": "MegaNavsslogin"
+      }
+    }, {
+      "title": "Support",
+      "mobileOrder": 3,
+      "href": "http://www.telus.com/support",
+      "hasSecondaryNav": false,
+      "analyticsTags": {
+        "marketing": "LNK_frmCTA_TopNavigationAll_toGetHelp",
+        "myaccount": "LNK_frmCTA_TopNavigationAll_toGetHelp"
       }
     }]
   }
