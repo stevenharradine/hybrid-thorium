@@ -21,7 +21,6 @@ let App = Vue.extend({
   },
   events: {
     'fullScreen::toggle'() {
-      console.log('hmm');
       this.isFullScreenMode = !this.isFullScreenMode;
     }
   },

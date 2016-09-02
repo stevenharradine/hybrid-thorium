@@ -1,5 +1,175 @@
 <div class="c-mega-nav-desktop">
-  <ul class="c-mega-nav-desktop__header">
+  <ul class="c-mega-nav-desktop__primary-nav">
+    <li v-for="primaryNavLink in data.primaryNavLinks">
+      <a :href="getLinkHrefWithAnalyticTag(primaryNavLink)">{{primaryNavLink.title}}</a>
+      <ul v-if="primaryNavLink.hasSecondaryNav" class="c-mega-nav__secondary-nav">
+        <!-- AB, BC -->
+        <template v-if="subNavTemplateType === 'sub-nav-template-type-1'">
+          <!-- Mobility -->
+          <li class="c-mega-nav__secondary-nav-item--mobility-type-1">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobility)">{{primaryNavLink.secondaryNavLinks.mobility.title}}</a>
+              <ul class="c-mega-nav__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.mobility.tertiaryNavLinks.groups">
+                <li v-for="link in group.links">
+                  <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- End Mobility -->
 
+          <!-- TV (optik & sat) -->
+          <li class="c-mega-nav__secondary-nav-item--tv-type-1">
+            <!-- Optik TV -->
+            <div>
+                <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.optiktv)">{{primaryNavLink.secondaryNavLinks.optiktv.title}}</a>
+                <ul class="c-mega-nav__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.optiktv.tertiaryNavLinks.groups">
+                  <li v-for="link in group.links">
+                    <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
+                  </li>
+                </ul>
+            </div>
+            <!-- End of Optik TV-->
+            <!-- Sat TV -->
+            <div>
+                <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.sattv)">{{primaryNavLink.secondaryNavLinks.sattv.title}}</a>
+            </div>
+            <!-- End of Sat TV -->
+          </li>
+          <!-- End of TV -->
+
+          <!-- Internet & Home Phone -->
+          <li class="c-mega-nav__secondary-nav-item--internet-homephone-type-1">
+            <!-- Internet -->
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.internet)">{{primaryNavLink.secondaryNavLinks.internet.title}}</a>
+              <ul class="c-mega-nav__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.internet.tertiaryNavLinks.groups">
+                <li v-for="link in group.links">
+                  <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of Internet -->
+            <!-- Home Phone -->
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.homePhone)">{{primaryNavLink.secondaryNavLinks.homePhone.title}}</a>
+              <ul class="c-mega-nav__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.homePhone.tertiaryNavLinks.groups">
+                <li v-for="link in group.links">
+                  <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End of Home Phone -->
+          </li>
+          <!-- End of Internet & Home Phone -->
+
+          <!-- Deals & Bundles -->
+          <li class="c-mega-nav__secondary-nav-item--deals-bundle-type-1">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealBundles)">{{primaryNavLink.secondaryNavLinks.dealBundles.title}}</a>
+              <p v-html="primaryNavLink.secondaryNavLinks.dealBundles.desc"></p>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealBundles.quickAccessLink)">
+                <img :src="primaryNavLink.secondaryNavLinks.dealBundles.quickAccessLink.imgSrc" :alt="primaryNavLink.secondaryNavLinks.dealBundles.quickAccessLink.imgAlt">
+                <span>{{primaryNavLink.secondaryNavLinks.dealBundles.quickAccessLink.title}}</span>
+              </a>
+            </div>
+          </li>
+          <!-- End of Deals & Bundles -->
+        </template>
+        <!-- End of AB, BC -->
+
+        <!-- MB, NB, NL, NT, NS, NU, ON, PE, SK, YT -->
+        <template v-if="subNavTemplateType === 'sub-nav-template-type-2'">
+          <!-- Mobility -->
+          <li class="c-mega-nav__secondary-nav-item--mobility-type-2">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobility)">{{primaryNavLink.secondaryNavLinks.mobility.title}}</a>
+              <ul class="c-mega-nav__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.mobility.tertiaryNavLinks.groups">
+                <li v-for="link in group.links">
+                  <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- End Mobility -->
+
+          <!-- Mobile Internet -->
+          <li class="c-mega-nav__secondary-nav-item--mobile-internet-type-2">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)">{{primaryNavLink.secondaryNavLinks.mobileInternet.title}}</a>
+              <p v-html="primaryNavLink.secondaryNavLinks.mobileInternet.desc"></p>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink)">
+                {{primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink.title}}
+              </a>
+            </div>
+          </li>
+          <!-- End of Mobile Internet -->
+
+
+          <!-- Deals -->
+          <li class="c-mega-nav__secondary-nav-item--deals-type-2">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealsWithImg)">{{primaryNavLink.secondaryNavLinks.dealsWithImg.title}}</a>
+              <p v-html="primaryNavLink.secondaryNavLinks.dealsWithImg.desc"></p>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealsWithImg.quickAccessLink)">
+                <img :src="primaryNavLink.secondaryNavLinks.dealsWithImg.quickAccessLink.imgSrc" :alt="primaryNavLink.secondaryNavLinks.dealsWithImg.quickAccessLink.imgAlt">
+                <span>{{primaryNavLink.secondaryNavLinks.dealsWithImg.quickAccessLink.title}}</span>
+              </a>
+            </div>
+          </li>
+          <!-- End of Deals -->
+        </template>
+        <!-- End of MB, NB, NL, NT, NS, NU, ON, PE, SK, YT -->
+
+        <!-- QC -->
+        <template v-if="subNavTemplateType === 'sub-nav-template-type-3'">
+          <!-- Mobility -->
+          <li class="c-mega-nav__secondary-nav-item--mobility-type-3">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobility)">{{primaryNavLink.secondaryNavLinks.mobility.title}}</a>
+              <ul class="c-mega-nav__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.mobility.tertiaryNavLinks.groups">
+                <li v-for="link in group.links">
+                  <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- End Mobility -->
+
+          <!-- Mobile Internet & Deals -->
+          <li class="c-mega-nav__secondary-nav-item--mobile-internet-deals-type-3">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)">{{primaryNavLink.secondaryNavLinks.mobileInternet.title}}</a>
+              <p v-html="primaryNavLink.secondaryNavLinks.mobileInternet.desc"></p>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink)">
+                {{primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink.title}}
+              </a>
+            </div>
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.deals)">{{primaryNavLink.secondaryNavLinks.deals.title}}</a>
+              <p v-html="primaryNavLink.secondaryNavLinks.deals.desc"></p>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.deals.quickAccessLink)">
+                {{primaryNavLink.secondaryNavLinks.deals.quickAccessLink.title}}
+              </a>
+            </div>
+          </li>
+          <!-- End of Mobile Internet & Deals -->
+
+          <!-- Residential Services -->
+          <li class="c-mega-nav__secondary-nav-item--deals-type-3">
+            <div>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.residentalServices)">{{primaryNavLink.secondaryNavLinks.residentalServices.title}}</a>
+              <p v-html="primaryNavLink.secondaryNavLinks.residentalServices.desc"></p>
+              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.residentalServices.quickAccessLink)">
+                <img :src="primaryNavLink.secondaryNavLinks.residentalServices.quickAccessLink.imgSrc" :alt="primaryNavLink.secondaryNavLinks.residentalServices.quickAccessLink.imgAlt">
+                <span>{{primaryNavLink.secondaryNavLinks.residentalServices.quickAccessLink.title}}</span>
+              </a>
+            </div>
+          </li>
+          <!-- End of Residential Services -->
+        </template>
+        <!-- End QC -->
+      </ul>
+    </li>
   </ul>
 </div>

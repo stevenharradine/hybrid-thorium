@@ -1,10 +1,10 @@
 <header>
   <template v-if="isContentLoaded">
-    <calamity-bar v-if.once="showCalamity" :data="data.calamityBar"></calamity-bar>
+    <!-- <calamity-bar v-if.once="showCalamity" :data="data.calamityBar"></calamity-bar>
     <notification-bubble v-if.once="showNotification" :data="getNotificationBubbleContent"></notification-bubble>
     <region-select :current-region="region" :current-lang="lang" :data="data.regionSelect"></region-select>
-    <global-nav :current-lang="lang" :data="data.globalNav" :application="application" :analytics="analytics"></global-nav>
-    <mega-nav-desktop :current-lang="lang" :data="data.megaNav" :application="application" :analytics="analytics"></mega-nav-desktop>
+    <global-nav :current-lang="lang" :data="data.globalNav" :application="application" :analytics="analytics"></global-nav> -->
+    <mega-nav-desktop :current-region="region" :current-lang="lang" :data="data.megaNav" :application="application" :analytics="analytics"></mega-nav-desktop>
     <!-- <mega-nav-mobile :current-lang="lang" :data="data.megaNav" :application="application" :analytics="analytics"></mega-nav-mobile> -->
   </template>
 </header>

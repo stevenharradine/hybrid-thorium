@@ -138,7 +138,6 @@
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": true,
           "tertiaryNavLinks": {
             "groups": [{
               "links": [{
@@ -225,7 +224,6 @@
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": true,
           "tertiaryNavLinks": {
             "groups": [{
               "links": [{
@@ -284,13 +282,11 @@
         "sattv": {
           "title": "Satellite TV",
           "icon": "",
-          "availableInEast": false,
           "href": "",
           "analyticsTags": {
             "marketing": "",
             "myaccount": ""
-          },
-          "hasTertiaryNav": false
+          }
         },
         "internet": {
           "title": "Internet",
@@ -300,7 +296,6 @@
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": true,
           "tertiaryNavLinks": {
             "groups": [{
               "links": [{
@@ -336,7 +331,6 @@
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": true,
           "tertiaryNavLinks": {
             "groups": [{
               "links": [{
@@ -360,34 +354,42 @@
         "dealBundles": {
           "title": "Deals & Bundles",
           "icon": "",
-          "availableInEast": false,
           "href": "http://www.telus.com/deals",
           "analyticsTags": {
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": false,
           "desc": "Only TELUS lets you bundle TV, Internet, Home Phone and Mobility services to save you money.",
-          "imgSrc": "http://static.telus.com/common/images/nav/bundle-services.png",
-          "imgAlt": "Bundled TELUS services",
-          "linkTitle": "Learn more",
-          "linkUrl": "http://www.telus.com/deals"
+          "quickAccessLink": {
+            "imgSrc": "http://static.telus.com/common/images/nav/bundle-services.png",
+            "imgAlt": "Bundled TELUS services",
+            "title": "Learn more",
+            "href": "http://www.telus.com/deals",
+            "analyticsTags": {
+              "marketing": "",
+              "myaccount": ""
+            }
+          }
         },
         "residentalServices": {
           "title": "Residential Services",
           "icon": "",
-          "availableInEast": false,
           "href": "http://www.telus.com/deals",
           "analyticsTags": {
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": false,
           "desc": "Only TELUS lets you bundle TV, Internet, Home Phone and Mobility services to save you money.",
-          "imgSrc": "http://static.telus.com/common/images/header/residential-service.jpg",
-          "imgAlt": "Featured image",
-          "linkTitle": "Learn more",
-          "linkUrl": "http://www.telusquebec.com"
+          "quickAccessLink": {
+            "imgSrc": "http://static.telus.com/common/images/header/residential-service.jpg",
+            "imgAlt": "Featured image",
+            "title": "Learn more",
+            "href": "http://www.telusquebec.com",
+            "analyticsTags": {
+              "marketing": "",
+              "myaccount": ""
+            }
+          }
         },
         "mobileInternet": {
           "title": "Mobile Internet",
@@ -397,10 +399,15 @@
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": false,
           "desc": "See our most popular Mobile Internet keys, Hotspots, and Smart hubs.",
-          "linkTitle": "Learn more",
-          "linkUrl": "http://www.telus.com/mobility/mobile-internet"
+          "quickAccessLink": {
+            "title": "Learn more",
+            "href": "http://www.telus.com/mobility/mobile-internet",
+            "analyticsTags": {
+              "marketing": "",
+              "myaccount": ""
+            }
+          }
         },
         "deals": {
           "title": "Deals",
@@ -410,10 +417,15 @@
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": false,
           "desc": "Now's the time to get the hottest smartphones on a 2 year term.",
-          "linkTitle": "Learn more",
-          "linkUrl": "http://www.telus.com/deals"
+          "quickAccessLink": {
+            "title": "Learn more",
+            "href": "http://www.telus.com/deals",
+            "analyticsTags": {
+              "marketing": "",
+              "myaccount": ""
+            }
+          }
         },
         "dealsWithImg": {
           "title": "Deals",
@@ -423,19 +435,23 @@
             "marketing": "",
             "myaccount": ""
           },
-          "hasTertiaryNav": false,
           "desc": "Now's the time to get the hottest smartphones on a 2 year term.",
-          "linkTitle": "Learn more",
-          "linkUrl": "http://www.telus.com/deals",
-          "imgSrc": "http://static.telus.com/common/images/nav/deals-smartphones.jpg",
-          "imgAlt": "Smartphones"
+          "quickAccessLink": {
+            "imgSrc": "http://static.telus.com/common/images/nav/deals-smartphones.jpg",
+            "imgAlt": "Smartphones",
+            "title": "See all deals",
+            "href": "http://www.telus.com/deals",
+            "analyticsTags": {
+              "marketing": "",
+              "myaccount": ""
+            }
+          }
         }
       }
     }, {
       "title": "My Account",
       "mobileOrder": 1,
       "href": "http://www.telus.com/my-account",
-      "hasSecondaryNav": false,
       "analyticsTags": {
         "marketing": "MegaNavsslogin",
         "myaccount": "MegaNavsslogin"
@@ -444,7 +460,6 @@
       "title": "Support",
       "mobileOrder": 3,
       "href": "http://www.telus.com/support",
-      "hasSecondaryNav": false,
       "analyticsTags": {
         "marketing": "LNK_frmCTA_TopNavigationAll_toGetHelp",
         "myaccount": "LNK_frmCTA_TopNavigationAll_toGetHelp"
