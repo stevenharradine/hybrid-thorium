@@ -1,0 +1,7 @@
+<div class="c-search-bar">
+  <form class="c-search-bar__form" method="post" action="https://www.telus.com/en/bc/search/execute.do">
+    <input v-model="queryString" class="c-search-bar__query" name="query" type="search" placeholder="Search TELUS.com">
+    <button :disabled="isQueryStringEmpty" type="submit" class="c-search-bar__submit" :class="{'c-search-bar__submit--active': !isQueryStringEmpty}" aria-label="Search">
+    </button>
+  </form>
+</div>

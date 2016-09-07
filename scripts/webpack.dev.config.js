@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var bourbon = require('node-bourbon').includePaths;
 
 module.exports = {
     entry: {
@@ -10,6 +11,9 @@ module.exports = {
         path: path.resolve(__dirname, '../dev/app'),
         publicPath: '/dev/app/',
         filename: 'app.js'
+    },
+    sassLoader: {
+      includePaths: [bourbon]
     },
     module: {
         preLoaders: [{

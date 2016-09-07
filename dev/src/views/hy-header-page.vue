@@ -5,7 +5,7 @@
      <hr class="hy_u-space-mb-2">
      <div class="sg_c-demo hy_o-layout hy_o-layout--with-gutter hy_o-layout--flushed">
          <div class="sg_c-demo__container">
-           <hy-header :lang="lang" :region="region" :application="personal" :analytics="marketing"></hy-header>
+           <hy-header :lang="lang" :region="region" :application="application" :analytics="analytics"></hy-header>
            <hr>
             <div class="hy_o-layout">
               <div class="hy_o-layout__item hy_u-size-3of12">
@@ -79,6 +79,8 @@ export default {
       application: 'personal',
       analytics: 'marketing'
     };
+  },
+  ready() {
   }
 };
 </script>

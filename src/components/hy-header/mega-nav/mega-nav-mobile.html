@@ -1,0 +1,43 @@
+<div class="c-mega-nav-mobile">
+  <div class="c-mega-nav-mobile__header">
+    <a href="#" class="c-mega-nav-mobile__header-nav-toggle" title="Menu">
+    </a>
+    <img src="https://static.telus.com/common/images/header/TELUS-logo.svg" alt="TELUS Logo">
+  </div>
+  <div class="c-mega-nav-mobile__nav-wrapper">
+    <search-bar></search-bar>
+    <ul class="c-mega-nav-mobile__global-nav">
+      <li class="c-mega-nav-mobile__global-nav-item" v-for="navItem in globalNav.links | filterBy !!hasSubNav">
+        <a :href="getLinkHrefWithAnalyticTag(navItem)">{{navItem.title}}</a>
+      </li>
+    </ul>
+    <ul class="c-mega-nav-mobile__primary-nav">
+      <template v-for="primaryNavLink in data.primaryNavLinks">
+        <template v-if="!primaryNavLink.hasSecondaryNav">
+          <li>
+            <a :href="getLinkHrefWithAnalyticTag(primaryNavLink)">{{primaryNavLink.title}}</a>
+          </li>
+        </template>
+        <template v-else>
+          <!-- AB, BC -->
+          <template v-if="subNavTemplateType === 'sub-nav-template-type-1'">
+
+          </template>
+          <!-- End of AB, BC -->
+
+          <!-- MB, NB, NL, NT, NS, NU, ON, PE, SK, YT -->
+          <template v-if="subNavTemplateType === 'sub-nav-template-type-2'">
+
+          </template>
+          <!-- End of MB, NB, NL, NT, NS, NU, ON, PE, SK, YT -->
+
+          <!-- QC -->
+          <template v-if="subNavTemplateType === 'sub-nav-template-type-3'">
+
+          </template>
+          <!-- End QC -->
+        </template>
+      </template>
+    </ul>
+  </div>
+</div>

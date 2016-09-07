@@ -1,14 +1,14 @@
 <style lang="sass">
-    @import '~telus-hydra/_base_scope';
     @import './mega-nav-desktop';
 </style>
 
 <template src="./mega-nav-desktop.html"></template>
 
 <script>
-import SearchBar from '../search-bar/index.vue';
-
+import SearchBar from './search-bar/index.vue';
+import commonMixin from '../common-mixin';
 export default {
+  mixins: [commonMixin],
   props: {
     data: {
       type: Object,
@@ -33,30 +33,12 @@ export default {
   },
   computed: {
     subNavTemplateType() {
-      let currentRegion = this.currentRegion.toLowerCase();
-      if (['ab', 'bc'].includes(currentRegion)) {
-        return 'sub-nav-template-type-1';
-      } else if (
-        ['mb', 'nb', 'nl', 'nt', 'ns', 'nu', 'on', 'pe', 'sk', 'yt'].includes(currentRegion)
-      ) {
-        return 'sub-nav-template-type-2';
-      }
-      return 'sub-nav-template-type-3';
+      return this.getTemplateType(this.currentRegion.toLowerCase());
     }
   },
   methods: {
     getLinkHrefWithAnalyticTag(link) {
-      let tag = `${this.getAyalyticTag(link)}__${this.currentLang.toUpperCase()}`;
-      return `${link.href}?INTCMP=${tag}`;
-    },
-    getAyalyticTag(link) {
-      if (
-        typeof link.analyticsTags !== 'undefined' &&
-        typeof link.analyticsTags[this.analytics] !== 'undefined'
-      ) {
-        return link.analyticsTags[this.analytics];
-      }
-      return '';
+      return this.getLinkHrefWithAnalyticTagMixin(link, this.currentLang.toUpperCase());
     }
   },
   components: {

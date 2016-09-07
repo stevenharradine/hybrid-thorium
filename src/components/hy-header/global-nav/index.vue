@@ -1,12 +1,13 @@
 <style lang="sass">
-    @import '~telus-hydra/_base_scope';
     @import './global-nav';
 </style>
 
 <template src="./global-nav.html"></template>
 
 <script>
+import commonMixin from '../common-mixin';
 export default {
+  mixins: [commonMixin],
   props: {
     data: {
       type: Object,
@@ -30,17 +31,7 @@ export default {
       link.isSubNavVisible = !link.isSubNavVisible;
     },
     getLinkHrefWithAnalyticTag(link) {
-      let tag = `${this.getAyalyticTag(link)}__${this.currentLang.toUpperCase()}`;
-      return `${link.href}?INTCMP=${tag}`;
-    },
-    getAyalyticTag(link) {
-      if (
-        typeof link.analyticsTags !== 'undefined' &&
-        typeof link.analyticsTags[this.analytics] !== 'undefined'
-      ) {
-        return link.analyticsTags[this.analytics];
-      }
-      return '';
+      return this.getLinkHrefWithAnalyticTagMixin(link, this.currentLang.toUpperCase());
     }
   },
   ready() {

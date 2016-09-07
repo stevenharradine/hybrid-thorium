@@ -1,5 +1,4 @@
 <style lang="sass">
-    @import '~telus-hydra/_base_scope';
     @import './hy-header.scss';
 </style>
 
@@ -92,7 +91,6 @@ export default {
     }
   },
   ready() {
-    console.log(this.analytics);
     this.setLocale();
     this.loadContent();
   }

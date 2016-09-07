@@ -452,6 +452,7 @@
       "title": "My Account",
       "mobileOrder": 1,
       "href": "http://www.telus.com/my-account",
+      "icon": "",
       "analyticsTags": {
         "marketing": "MegaNavsslogin",
         "myaccount": "MegaNavsslogin"
@@ -460,6 +461,7 @@
       "title": "Support",
       "mobileOrder": 3,
       "href": "http://www.telus.com/support",
+      "icon": "",
       "analyticsTags": {
         "marketing": "LNK_frmCTA_TopNavigationAll_toGetHelp",
         "myaccount": "LNK_frmCTA_TopNavigationAll_toGetHelp"
