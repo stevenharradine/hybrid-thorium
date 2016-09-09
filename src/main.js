@@ -12,6 +12,8 @@ import Alert from './components/alert/index.vue';
 import Spinner from './components/spinner/index.vue';
 import HyHeader from './components/hy-header/index.vue';
 
+import expand from './transitions/expand';
+
 let components = {
   StepTracker,
   OverlayContainer,
@@ -25,10 +27,16 @@ let components = {
   Spinner,
   HyHeader
 };
+
 let directives = {
   overlayOpener,
   setFocus
 };
+
+let transitions = {
+  expand
+};
+
 
 module.exports = function install(Vue) {
   for (let name in components) {
@@ -36,5 +44,8 @@ module.exports = function install(Vue) {
   }
   for (let name in directives) {
     Vue.directive(name, directives[name]);
+  }
+  for (let name in transitions) {
+    Vue.transition(name, transitions[name]);
   }
 };

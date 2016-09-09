@@ -9,6 +9,11 @@ import SearchBar from './search-bar/index.vue';
 import commonMixin from '../common-mixin';
 export default {
   mixins: [commonMixin],
+  data() {
+    return {
+      isMegaVisible: false
+    };
+  },
   props: {
     data: {
       type: Object,
@@ -37,6 +42,9 @@ export default {
     }
   },
   methods: {
+    toggleMegaNav() {
+      this.isMegaVisible = !this.isMegaVisible;
+    },
     getLinkHrefWithAnalyticTag(link) {
       return this.getLinkHrefWithAnalyticTagMixin(link, this.currentLang.toUpperCase());
     }

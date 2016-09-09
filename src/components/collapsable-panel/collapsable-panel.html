@@ -7,9 +7,7 @@
     class="c-collapsable-panel__header hy_c-headline hy_c-headline--h5 hy_t-grey"
     v-html="label">
   </h3>
-  <div class="c-collapsable-panel__body" :class="{
-    'c-collapsable-panel__body--open': isOpen
-  }">
+  <div class="c-collapsable-panel__body" v-show="isOpen" transition="expand">
     <slot></slot>
   </div>
 </div>

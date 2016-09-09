@@ -1,8 +1,9 @@
 <div class="c-mega-nav-desktop">
   <ul class="c-mega-nav-desktop__primary-nav">
     <li v-for="primaryNavLink in data.primaryNavLinks">
-      <a :href="getLinkHrefWithAnalyticTag(primaryNavLink)">{{primaryNavLink.title}}</a>
-      <ul v-if="primaryNavLink.hasSecondaryNav" class="c-mega-nav-desktop__secondary-nav">
+      <a :href="getLinkHrefWithAnalyticTag(primaryNavLink)" v-if="!primaryNavLink.hasSecondaryNav">{{primaryNavLink.title}}</a>
+      <a @click.prevent="toggleMegaNav" href="#" v-else>{{primaryNavLink.title}}</a>
+      <ul v-if="primaryNavLink.hasSecondaryNav" class="c-mega-nav-desktop__secondary-nav" transition="expand" v-show="isMegaVisible">
         <!-- AB, BC -->
         <template v-if="subNavTemplateType === 'sub-nav-template-type-1'">
           <!-- Mobility -->

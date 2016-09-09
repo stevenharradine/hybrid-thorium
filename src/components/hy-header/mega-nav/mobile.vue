@@ -9,6 +9,11 @@ import SearchBar from './search-bar/index.vue';
 import commonMixin from '../common-mixin';
 export default {
   mixins: [commonMixin],
+  data() {
+    return {
+      isMegaVisible: false
+    };
+  },
   props: {
     data: {
       type: Object,
@@ -41,6 +46,12 @@ export default {
     }
   },
   methods: {
+    toggleSubNav(nav) {
+      nav.isSubNavVisible = !nav.isSubNavVisible;
+    },
+    toggleMegaNav() {
+      this.isMegaVisible = !this.isMegaVisible;
+    },
     getLinkHrefWithAnalyticTag(link) {
       return this.getLinkHrefWithAnalyticTagMixin(link, this.currentLang.toUpperCase());
     }
@@ -48,9 +59,17 @@ export default {
   components: {
     SearchBar
   },
-  ready() {
-    console.log(this.globalNav);
+  created() {
     this.data.primaryNavLinks.sort((itemA, itemB) => itemA.mobileOrder > itemB.mobileOrder);
+    this.data.primaryNavLinks.forEach((link, index) => {
+      if (!!link.hasSecondaryNav) {
+        for (let key in link.secondaryNavLinks) {
+          link.secondaryNavLinks[key] = Object.assign(
+            {}, link.secondaryNavLinks[key], { isSubNavVisible: false }
+          );
+        }
+      }
+    });
   }
 };
 </script>

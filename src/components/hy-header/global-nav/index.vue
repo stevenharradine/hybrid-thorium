@@ -34,10 +34,7 @@ export default {
       return this.getLinkHrefWithAnalyticTagMixin(link, this.currentLang.toUpperCase());
     }
   },
-  ready() {
-    console.log('data', this.data);
-    console.log('app', this.application);
-    console.log('analytics', this.analytics);
+  created() {
     // Hide all the sub navs (even there is only one)
     this.data.links.forEach((link, index) => {
       if (!!link.hasSubNav) {

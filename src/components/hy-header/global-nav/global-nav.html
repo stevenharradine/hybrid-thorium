@@ -6,7 +6,7 @@
       </template>
       <template v-if="link.hasSubNav">
         <a href="#" @click.prevent="toggleSubNav(link)">{{link.title}}</a>
-        <ul class="c-global-nav__subnav" v-show="link.isSubNavVisible">
+        <ul class="c-global-nav__subnav" v-show="!!link.isSubNavVisible" transition="expand">
           <li v-for="subNav in link.subNav" class="c-global-nav__subnav-link">
             <a :href="getLinkHrefWithAnalyticTag(subNav)">{{subNav.title}}</a>
           </li>
