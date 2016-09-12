@@ -13,8 +13,6 @@ import MegaNavMobile from './mega-nav/mobile.vue';
 import RegionSelect from './region-select/index.vue';
 import mixins from '../../mixins';
 
-import ContentEn from 'json!./content-en.json';
-import ContentFr from 'json!./content-fr.json';
 import * as constants from './header-constants';
 
 export default {
@@ -73,13 +71,14 @@ export default {
     }
   },
   methods: {
-    loadContent() {
-      if (this.lang.toLowerCase() === 'en') {
-        this.data = ContentEn;
-      } else {
-        this.data = ContentFr;
-      }
-      this.isContentLoaded = true;
+    loadContent(lang) {
+      let endPoint = constants.JSON_ENDPOINT[lang];
+      fetch(endPoint)
+      .then(this.parseJSON)
+      .then(data => {
+        this.data = data;
+        this.isContentLoaded = true;
+      });
     },
     setLocale() {
       let BrowserProfileCookie = this.getCookie(constants.BROWSER_PROFILE_COOKIE);
@@ -92,7 +91,7 @@ export default {
   },
   ready() {
     this.setLocale();
-    this.loadContent();
+    this.loadContent(this.lang.toLowerCase());
   }
 };
 </script>

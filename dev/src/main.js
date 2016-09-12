@@ -26,7 +26,7 @@ let App = Vue.extend({
   },
   data() {
     return {
-      isFullScreenMode: false,
+      isFullScreenMode: true,
       ligerEndPoint: 'https://api.cms.telus.com/legals',
       ligerApplicationKey: 'b9738d67b89dfc782746d4a9cf4a1093'
     };

@@ -8,19 +8,19 @@
   <div class="c-mega-nav-mobile__nav-wrapper" transition="expand" v-show="isMegaVisible">
     <search-bar></search-bar>
     <ul class="c-mega-nav-mobile__global-nav">
-      <li class="c-mega-nav-mobile__global-nav-item" v-for="navItem in globalNav.links | filterBy !!hasSubNav">
+      <li v-if="!navItem.hasSubNav" class="c-mega-nav-mobile__global-nav-item" v-for="navItem in globalNav.links">
         <a :href="getLinkHrefWithAnalyticTag(navItem)">{{navItem.title}}</a>
       </li>
     </ul>
     <ul class="c-mega-nav-mobile__primary-nav">
       <template v-for="primaryNavLink in data.primaryNavLinks">
         <template v-if="!primaryNavLink.hasSecondaryNav">
-          <li class="c-mega-nav-mobile__primary-nav-item">
+          <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.icon }}">
             <a :href="getLinkHrefWithAnalyticTag(primaryNavLink)">{{primaryNavLink.title}}</a>
           </li>
         </template>
         <template v-else>
-          <li class="c-mega-nav-mobile__primary-nav-item">
+          <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.mobility.icon }}">
             <a @click.prevent="toggleSubNav(primaryNavLink.secondaryNavLinks.mobility)" href="#">{{primaryNavLink.secondaryNavLinks.mobility.title}}</a>
             <ul class="c-mega-nav-mobile__secondary-nav" transition="expand" v-show="!!primaryNavLink.secondaryNavLinks.mobility.isSubNavVisible">
               <template v-for="group in primaryNavLink.secondaryNavLinks.mobility.tertiaryNavLinks.groups">
@@ -32,7 +32,7 @@
           </li>
           <!-- AB, BC -->
           <template v-if="subNavTemplateType === 'sub-nav-template-type-1'">
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.optiktv.icon }}">
               <a @click.prevent="toggleSubNav(primaryNavLink.secondaryNavLinks.optiktv)" href="#">{{primaryNavLink.secondaryNavLinks.optiktv.title}}</a>
               <ul class="c-mega-nav-mobile__secondary-nav" transition="expand" v-show="!!primaryNavLink.secondaryNavLinks.optiktv.isSubNavVisible">
                 <template v-for="group in primaryNavLink.secondaryNavLinks.optiktv.tertiaryNavLinks.groups">
@@ -42,10 +42,10 @@
                 </template>
               </ul>
             </li>
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.sattv.icon }}">
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.sattv)">{{primaryNavLink.secondaryNavLinks.sattv.title}}</a>
             </li>
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.internet.icon }}">
               <a @click.prevent="toggleSubNav(primaryNavLink.secondaryNavLinks.internet)" href="#">{{primaryNavLink.secondaryNavLinks.internet.title}}</a>
               <ul class="c-mega-nav-mobile__secondary-nav" transition="expand" v-show="!!primaryNavLink.secondaryNavLinks.internet.isSubNavVisible">
                 <template v-for="group in primaryNavLink.secondaryNavLinks.internet.tertiaryNavLinks.groups">
@@ -55,7 +55,7 @@
                 </template>
               </ul>
             </li>
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.homePhone.icon }}">
               <a @click.prevent="toggleSubNav(primaryNavLink.secondaryNavLinks.homePhone)" href="#">{{primaryNavLink.secondaryNavLinks.homePhone.title}}</a>
               <ul class="c-mega-nav-mobile__secondary-nav" transition="expand" v-show="!!primaryNavLink.secondaryNavLinks.homePhone.isSubNavVisible">
                 <template v-for="group in primaryNavLink.secondaryNavLinks.homePhone.tertiaryNavLinks.groups">
@@ -65,7 +65,7 @@
                 </template>
               </ul>
             </li>
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.dealBundles.icon }}">
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealBundles)">{{primaryNavLink.secondaryNavLinks.dealBundles.title}}</a>
             </li>
           </template>
@@ -73,10 +73,10 @@
 
           <!-- MB, NB, NL, NT, NS, NU, ON, PE, SK, YT -->
           <template v-if="subNavTemplateType === 'sub-nav-template-type-2'">
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.mobileInternet.icon }}">
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)">{{primaryNavLink.secondaryNavLinks.mobileInternet.title}}</a>
             </li>
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.deals.icon }}">
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.deals)">{{primaryNavLink.secondaryNavLinks.deals.title}}</a>
             </li>
           </template>
@@ -84,19 +84,29 @@
 
           <!-- QC -->
           <template v-if="subNavTemplateType === 'sub-nav-template-type-3'">
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.mobileInternet.icon }}">
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)">{{primaryNavLink.secondaryNavLinks.mobileInternet.title}}</a>
             </li>
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.deal.icon }}">
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.deals)">{{primaryNavLink.secondaryNavLinks.deals.title}}</a>
             </li>
-            <li class="c-mega-nav-mobile__primary-nav-item">
+            <li class="c-mega-nav-mobile__primary-nav-item c-mega-nav-mobile__nav-item--{{ primaryNavLink.secondaryNavLinks.residentalServices.icon }}">
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.residentalServices)">{{primaryNavLink.secondaryNavLinks.residentalServices.title}}</a>
             </li>
           </template>
           <!-- End QC -->
         </template>
       </template>
+    </ul>
+    <ul class="c-mega-nav-mobile__other-sites">
+      <li v-for="navItem in globalNav.links" v-if="navItem.hasSubNav">
+        <a @click.prevent="toggleSubNav(navItem)" :href="getLinkHrefWithAnalyticTag(navItem)">{{navItem.title}}</a>
+        <ul transition="expand" v-show="navItem.isSubNavVisible">
+          <li v-for="nav in navItem.subNav">
+            <a :href="getLinkHrefWithAnalyticTag(nav)">{{nav.title}}</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </div>
 </div>

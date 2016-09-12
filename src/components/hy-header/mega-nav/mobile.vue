@@ -60,6 +60,11 @@ export default {
     SearchBar
   },
   created() {
+    this.globalNav.links.forEach((link, index) => {
+      if (!!link.hasSubNav) {
+        this.globalNav.links.$set(index, Object.assign({}, link, { isSubNavVisible: false }));
+      }
+    });
     this.data.primaryNavLinks.sort((itemA, itemB) => itemA.mobileOrder > itemB.mobileOrder);
     this.data.primaryNavLinks.forEach((link, index) => {
       if (!!link.hasSecondaryNav) {

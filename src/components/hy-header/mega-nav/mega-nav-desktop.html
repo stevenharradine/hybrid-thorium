@@ -9,7 +9,9 @@
           <!-- Mobility -->
           <li class="c-mega-nav-desktop__secondary-nav-item--mobility-type-1">
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobility)">{{primaryNavLink.secondaryNavLinks.mobility.title}}</a>
+              <a class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.mobility.icon }}" :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobility)">
+                {{primaryNavLink.secondaryNavLinks.mobility.title}}
+              </a>
               <ul class="c-mega-nav-desktop__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.mobility.tertiaryNavLinks.groups">
                 <li v-for="link in group.links">
                   <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
@@ -23,7 +25,11 @@
           <li class="c-mega-nav-desktop__secondary-nav-item--tv-type-1">
             <!-- Optik TV -->
             <div>
-                <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.optiktv)">{{primaryNavLink.secondaryNavLinks.optiktv.title}}</a>
+                <a
+                  class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.optiktv.icon }}"
+                  :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.optiktv)">
+                    {{primaryNavLink.secondaryNavLinks.optiktv.title}}
+                </a>
                 <ul class="c-mega-nav-desktop__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.optiktv.tertiaryNavLinks.groups">
                   <li v-for="link in group.links">
                     <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
@@ -33,7 +39,11 @@
             <!-- End of Optik TV-->
             <!-- Sat TV -->
             <div>
-                <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.sattv)">{{primaryNavLink.secondaryNavLinks.sattv.title}}</a>
+                <a
+                  class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.sattv.icon }}"
+                  :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.sattv)">
+                  {{primaryNavLink.secondaryNavLinks.sattv.title}}
+                </a>
             </div>
             <!-- End of Sat TV -->
           </li>
@@ -43,7 +53,11 @@
           <li class="c-mega-nav-desktop__secondary-nav-item--internet-homephone-type-1">
             <!-- Internet -->
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.internet)">{{primaryNavLink.secondaryNavLinks.internet.title}}</a>
+              <a
+              class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.internet.icon }}"
+              :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.internet)">
+                {{primaryNavLink.secondaryNavLinks.internet.title}}
+              </a>
               <ul class="c-mega-nav-desktop__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.internet.tertiaryNavLinks.groups">
                 <li v-for="link in group.links">
                   <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
@@ -53,7 +67,11 @@
             <!-- End of Internet -->
             <!-- Home Phone -->
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.homePhone)">{{primaryNavLink.secondaryNavLinks.homePhone.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.homePhone.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.homePhone)">
+                {{primaryNavLink.secondaryNavLinks.homePhone.title}}
+              </a>
               <ul class="c-mega-nav-desktop__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.homePhone.tertiaryNavLinks.groups">
                 <li v-for="link in group.links">
                   <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
@@ -67,7 +85,12 @@
           <!-- Deals & Bundles -->
           <li class="c-mega-nav-desktop__secondary-nav-item--deals-bundle-type-1">
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealBundles)">{{primaryNavLink.secondaryNavLinks.dealBundles.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.dealBundles.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealBundles)"
+              >
+                {{primaryNavLink.secondaryNavLinks.dealBundles.title}}
+              </a>
               <p v-html="primaryNavLink.secondaryNavLinks.dealBundles.desc"></p>
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealBundles.quickAccessLink)">
                 <img :src="primaryNavLink.secondaryNavLinks.dealBundles.quickAccessLink.imgSrc" :alt="primaryNavLink.secondaryNavLinks.dealBundles.quickAccessLink.imgAlt">
@@ -84,7 +107,12 @@
           <!-- Mobility -->
           <li class="c-mega-nav-desktop__secondary-nav-item--mobility-type-2">
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobility)">{{primaryNavLink.secondaryNavLinks.mobility.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.mobility.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobility)"
+              >
+                {{primaryNavLink.secondaryNavLinks.mobility.title}}
+              </a>
               <ul class="c-mega-nav-desktop__tertiary-nav" v-for="group in primaryNavLink.secondaryNavLinks.mobility.tertiaryNavLinks.groups">
                 <li v-for="link in group.links">
                   <a :href="getLinkHrefWithAnalyticTag(link)">{{link.title}}</a>
@@ -97,7 +125,12 @@
           <!-- Mobile Internet -->
           <li class="c-mega-nav-desktop__secondary-nav-item--mobile-internet-type-2">
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)">{{primaryNavLink.secondaryNavLinks.mobileInternet.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.mobileInternet.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)"
+              >
+              {{primaryNavLink.secondaryNavLinks.mobileInternet.title}}
+            </a>
               <p v-html="primaryNavLink.secondaryNavLinks.mobileInternet.desc"></p>
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink)">
                 {{primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink.title}}
@@ -110,7 +143,11 @@
           <!-- Deals -->
           <li class="c-mega-nav-desktop__secondary-nav-item--deals-type-2">
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealsWithImg)">{{primaryNavLink.secondaryNavLinks.dealsWithImg.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.dealsWithImg.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealsWithImg)">
+                {{primaryNavLink.secondaryNavLinks.dealsWithImg.title}}
+              </a>
               <p v-html="primaryNavLink.secondaryNavLinks.dealsWithImg.desc"></p>
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.dealsWithImg.quickAccessLink)">
                 <img :src="primaryNavLink.secondaryNavLinks.dealsWithImg.quickAccessLink.imgSrc" :alt="primaryNavLink.secondaryNavLinks.dealsWithImg.quickAccessLink.imgAlt">
@@ -140,14 +177,22 @@
           <!-- Mobile Internet & Deals -->
           <li class="c-mega-nav-desktop__secondary-nav-item--mobile-internet-deals-type-3">
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)">{{primaryNavLink.secondaryNavLinks.mobileInternet.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.mobileInternet.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet)">
+                {{primaryNavLink.secondaryNavLinks.mobileInternet.title}}
+              </a>
               <p v-html="primaryNavLink.secondaryNavLinks.mobileInternet.desc"></p>
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink)">
                 {{primaryNavLink.secondaryNavLinks.mobileInternet.quickAccessLink.title}}
               </a>
             </div>
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.deals)">{{primaryNavLink.secondaryNavLinks.deals.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.deals.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.deals)">
+                {{primaryNavLink.secondaryNavLinks.deals.title}}
+              </a>
               <p v-html="primaryNavLink.secondaryNavLinks.deals.desc"></p>
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.deals.quickAccessLink)">
                 {{primaryNavLink.secondaryNavLinks.deals.quickAccessLink.title}}
@@ -159,7 +204,11 @@
           <!-- Residential Services -->
           <li class="c-mega-nav-desktop__secondary-nav-item--deals-type-3">
             <div>
-              <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.residentalServices)">{{primaryNavLink.secondaryNavLinks.residentalServices.title}}</a>
+              <a
+                class="c-mega-nav-desktop__secondary-nav--{{ primaryNavLink.secondaryNavLinks.residentalServices.icon }}"
+                :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.residentalServices)">
+                {{primaryNavLink.secondaryNavLinks.residentalServices.title}}
+              </a>
               <p v-html="primaryNavLink.secondaryNavLinks.residentalServices.desc"></p>
               <a :href="getLinkHrefWithAnalyticTag(primaryNavLink.secondaryNavLinks.residentalServices.quickAccessLink)">
                 <img :src="primaryNavLink.secondaryNavLinks.residentalServices.quickAccessLink.imgSrc" :alt="primaryNavLink.secondaryNavLinks.residentalServices.quickAccessLink.imgAlt">
@@ -170,6 +219,11 @@
           <!-- End of Residential Services -->
         </template>
         <!-- End QC -->
+
+        <div class="c-mega-nav-desktop__footer">
+          <img src="./expect-more-bird.png" alt="{{data.footer.imageAlt}}">
+          <a :href="data.footer.href">{{data.footer.content}}</a>
+        </div>
       </ul>
     </li>
   </ul>
